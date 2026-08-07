@@ -1,0 +1,374 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CONFIGURATION FILE  %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=4em]{geometry}
+\usepackage{ulem}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{longtable}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{Q}
+\usepackage{array}
+\usepackage{graphbox}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\captionsetup[figure]{labelfont=bf,labelsep=colon}
+
+% For Sections: 2em space after
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2em}
+% For Subsections: 1em space after
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+
+
+% -------------------------------------------------
+%   Collaborative color code to communicate
+% -------------------------------------------------
+%   Notes / errors spotted
+\newcommand{\note}[1]{\textcolor{brown}{#1}}
+%   Minor error
+\newcommand{\minorerror}[1]{\textcolor{orange}{#1}}
+%   error
+\newcommand{\error}[1]{\textcolor{red}{#1}}
+%   Correction
+\newcommand{\correction}[1]{\textcolor{blue}{#1}}
+%   Approuved correction
+\newcommand{\ok}[1]{\textcolor{green}{#1}}
+%   Unaprouved correction
+\newcommand{\ko}[1]{\textcolor{magenta}{#1}}
+%   Advice to complete correction
+\newcommand{\advice}[1]{\textcolor{violet}{#1}}
+
+%   STD Colors
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\warning}[1]{\yellowcircle{WARNING !} \note{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   FORMAT SHORTCUT COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+                                                %+++++++++++++++++++%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       TEXTS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                %+++++++++++++++++++%
+   
+%=============================================================%
+%   CMD :
+    %   \itm
+
+%   ARGS :
+    %   #1 {Your text}
+
+%   DESCRIPTION :
+    %   Circle yout text in yellow
+
+    \newcommand{\itm}[1]{\item[\yellowcircle{#1}]}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+
+%   Format text between TAB and IMG
+
+    %   Usage : \inform{...}
+
+\newcommand{\inform}[1]{\vspace{10pt}{#1}\vspace{3pt}}
+
+%=============================================================%
+
+
+
+
+
+
+
+                                                %+++++++++++++++++++%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       TEXTS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                %+++++++++++++++++++%
+
+%==============================================================%
+%   CMD :   inform
+
+%   Description :
+    %   Format text between TAB and IMG
+
+%   ARGS : 
+    %   #1 {TEXT}
+
+%   Usage : \inform{...}
+
+    \newcommand{\inform}[1]{\vspace{10pt}{#1}\vspace{3pt}}
+
+%=============================================================%
+
+
+
+
+
+                                                %+++++++++++++++++++%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        TABS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                %+++++++++++++++++++%
+
+%=============================================================%
+%   CMD :
+
+%   DESCRIPTION : 
+    %   NO CAPTION SUB-BOM'S ITEM TAB--> ARGS
+    
+%   ARGS :
+    %   #1 {ITEMS} (Qte | Illustration | Name | ID)
+
+%   USAGE :
+    %   \showT{...}
+
+\newcommand{\showTAB}[1]{\begin{tblr}{colspec = {Q[c,m] Q[c,m] X X}, hlines, vlines, rowhead = 0, rowsep = 6pt}\textbf{Quantity} & \textbf{Illustration} & \textbf{Name} & \textbf{Part ID} \\ #1 \end{tblr}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showTABTAB
+
+%   DESCRIPTION : 
+    %   show two tabs into a 0.45|0.45 minipage
+
+%   ARGS
+    %               #1 {CAPTION}
+    %               #2 {FIRST TAB ITEMS} (QTE | ILLUSTRATION | NAME | TYPE)
+    %               #3 {sECOND TAB ITEMS} (QTE | ILLUSTRATION | NAME | TYPE) 
+
+%   USAGE
+    %   \showTT{}{}{}
+
+\newcommand{\showTT}[3]{\begin{table}[h]\centering\footnotesize\caption{#1}\begin{minipage}[t]{0.45\textwidth}\vspace{0pt}\begin{tblr}{colspec = {Q[c,m] Q[c,m] Q[c,m] Q[c,m]},hlines, vlines}\textbf{Quantity} & \textbf{Illustration} & \textbf{Name} & \textbf{Type} \\  #2 \end{tblr} \end{minipage}\hspace{2pt}\begin{minipage}[t]{0.45\textwidth}\vspace{0pt}\begin{tblr}{colspec = {Q[c,m] Q[c,m] Q[c,m] Q[c,m]},hlines, vlines}\textbf{Quantity} & \textbf{Illustration} & \textbf{Name} & \textbf{Type} \\ #3 \end{tblr}\end{minipage}\end{table}}
+
+%=============================================================%
+
+
+    
+
+
+
+
+                                                %+++++++++++++++++++%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     MINIPAGES     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                %+++++++++++++++++++%
+
+%=============================================================%
+%   CMD :
+    %   showI
+
+%   DESCRIPTION :
+    %   Format one image
+
+%   ARGS :
+    %   #1 {IMG}
+    %   #2 {SIZE}
+
+%   Usage :
+    %   \showone{path_to_the_img}{size}
+
+\newcommand{\showI}[2]{\begin{figure}[H]\begin{center}\includegraphics[width=#2\textwidth]{#1}\end{center}\end{figure}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showII
+
+%   DESCRIPTION :
+    %   IMG/IMG : SAME SIZE
+
+%   ARGS
+    %   #1 {IMG1} (size: 0.45)
+    %   #2 {IMG2} (size: 0.45) 
+
+%   Usage : \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showII}[2]{\begin{center}\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showBII
+
+%   DESCRIPTION :
+    %   IMG/IMG : BIG LEFT / LITTLE RIGHT
+
+%   ARGS :
+    %   #1 {IMG1} (size: 0.55)
+    %   #2 {IMG2} (size: 0.35)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showBII}[2]{\begin{center}\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showLII
+
+%   DESCRIPTION :
+    %   IMG/IMG : LITTLE LEFT / BIG RIGHT
+
+%   ARGS :
+    %   #1 {IMG1} (size: 0.35)
+    %   #2 {IMG2} (size: 0.55)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showLII}[2]{\begin{center}\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+    
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showIT
+
+%   DESCRIPTION :
+    %   IMG/TXT : SAME
+
+%   ARGS :
+    %   #1 {IMG} (size: 0.45)
+    %   #2 {TXT} (size: 0.45)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showIT}[2]{\begin{center}\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.45\textwidth} #2 \end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showTI
+
+%   DESCRIPTION :
+    %   TXT/IMG : SAME
+
+%   ARGS :
+    %   #1 {TXT} (size: 0.45)
+    %   #2 {IMG} (size: 0.45)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showTI}[2]{\begin{center}\begin{minipage}{0.45\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showBIT
+
+%   DESCRIPTION :
+    %   BIG IMG / LITTLE TXT
+
+%   ARGS :
+    %   #1 {IMG} (size: 0.55)
+    %   #2 {TXT} (size: 0.35)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showBIT}[2]{\begin{center}\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.35\textwidth} #2 \end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showBTI
+
+%   DESCRIPTION :
+    %   BIG TXT / LITTLE IMG
+    
+%   ARGS :
+    %   #1 {TXT} (size: 0.55)
+    %   #2 {IMG} (size: 0.35)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showBTI}[2]{\begin{center}\begin{minipage}{0.55\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showLIT
+
+%   DESCRIPTION :
+    %   LITTLE IMG / BIG TXT
+
+%   ARGS :
+    %   #1 {IMG} (size: 0.35)
+    %   #2 {TXT} (size: 0.55)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showLIT}[2]{\begin{center}\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.55\textwidth} #2 \end{minipage}\end{center}}
+
+%=============================================================%
+
+
+%=============================================================%
+%   CMD :
+    %   showLTI
+
+%   DESCRIPTION : 
+    %    LITTLE TXT / BIG IMG
+
+%   ARGS :
+    %   #1 {TXT} (size: 0.35)
+    %   #2 {IMG} (size: 0.55)
+
+%   Usage :
+    %   \showtwo{path_to_1}{path_to_2}
+
+\newcommand{\showLTI}[2]{\begin{center}\begin{minipage}{0.35\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+%=============================================================%
+
