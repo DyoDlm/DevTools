@@ -97,7 +97,7 @@ get_state() {
 		MD5="md5"
 	fi
 	SRC_STATE=$(find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;)
-	MAIN_STATE=$(find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;)
+	MAIN_STATE=$(find . -maxdepth 1 -name "$MAIN" -exec $MD5 {} \;)
 	echo "$SRC_STATE $MAIN_STATE"
 }
 

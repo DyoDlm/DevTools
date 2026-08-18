@@ -75,9 +75,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-                                                %+++++++++++++++++++%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       TEXTS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                                %+++++++++++++++++++%
+                                                %+++++++++++++++++++++++++++%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       TEXTS & UTILS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                %+++++++++++++++++++++++++++%
    
 %=============================================================%
 %   CMD :
@@ -107,6 +107,10 @@
     \newcommand{\inform}[1]{\vspace{10pt}{#1}\vspace{3pt}}
 
 %=============================================================%
+
+%=============================================================%
+
+\def\empty{}
 
 
 
@@ -203,8 +207,15 @@
 %   Usage :
     %   \showone{path_to_the_img}{size}
 
-\newcommand{\showI}[2]{\begin{figure}[H]\begin{center}\includegraphics[width=#2\textwidth]{#1}\end{center}\end{figure}}
-
+%\newcommand{\showI}[2]{\begin{figure}[H]\begin{center}\includegraphics[width=#2\textwidth]{#1}\end{center}\end{figure}}
+\NewDocumentCommand{\showI}{D<>{} m m}{%
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#2\textwidth]{#3}
+    \def\tmpcap{#1}%
+    \ifx\tmpcap\empty\else\caption{#1}\fi
+  \end{figure}%
+}
 %=============================================================%
 
 
