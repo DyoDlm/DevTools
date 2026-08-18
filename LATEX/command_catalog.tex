@@ -21,6 +21,38 @@
     }
 
 
+\showtab[3]{One tab caption}{
+  Nom & ID & Format \\
+  Foo & 1   & tct    \\
+  Bar & N   & fjs
+}
+
+% Cas B : 4 colonnes (avec illustration)
+\showtab[4]{One tab caption}{
+  Nom & ID & Format & Illustration \\
+  Foo & 1   & tct    & \includegraphics[width=1cm]{foo.png} \\
+  Bar & N   & fjs    & \includegraphics[width=1cm]{bar.png}
+}
+
+\showTABTAB[3]{Ma légende}{
+  \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
+  Foo & 1 & tct \\
+  Bar & N & fjs
+}{
+  \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
+  Baz & 2 & abc \\
+  Qux & M & xyz
+}
+
+\showTABTAB[4]{Ma légende}{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} & foo \\
+  Foo & 1 & tct & bar\\
+  Bar & N & fjs & bar
+}{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} & foo\\
+  Baz & 2 & abc & bar \\
+  Qux & M & xyz & bar
+}
 
 
 

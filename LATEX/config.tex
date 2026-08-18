@@ -136,50 +136,73 @@
 
                                                 %+++++++++++++++++++%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        TABS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                                %+++++++++++++++++++%
 
 %=============================================================%
-%   CMD :
+%   CMD :   showTAB
 
 %   DESCRIPTION : 
     %   NO CAPTION SUB-BOM'S ITEM TAB--> ARGS
     
 %   ARGS :
-    %   #1 {ITEMS} (Qte | Illustration | Name | ID)
+    %   [Nb of items]
+    %   #1 {Caption}
+    %   #2 {ITEMS} 
 
 %   USAGE :
     %   \showT{...}
 
-\newcommand{\showTAB}[1]{\begin{tblr}{colspec = {Q[c,m] Q[c,m] X X}, hlines, vlines, rowhead = 0, rowsep = 6pt}\textbf{Quantity} & \textbf{Illustration} & \textbf{Name} & \textbf{Part ID} \\ #1 \end{tblr}}
+\usepackage{xparse}
+\usepackage{tabularray}
 
-%=============================================================%
+% ---------- Tableau seul, centré, avec légende ----------
+\NewDocumentCommand{\showtab}{O{4} m m}{%
+  \begin{table}[h]
+    \centering
+    \footnotesize
+    \caption{#2}
+    \begin{tblr}{
+      colspec = {*{#1}{Q[c,m]}},
+      hlines, vlines,
+      rowhead = 1,
+    }
+      #3
+    \end{tblr}
+  \end{table}%
+}
 
-
-%=============================================================%
-%   CMD :
-    %   showTABTAB
-
-%   DESCRIPTION : 
-    %   show two tabs into a 0.45|0.45 minipage
-
-%   ARGS
-    %               #1 {CAPTION}
-    %               #2 {FIRST TAB ITEMS} (QTE | ILLUSTRATION | NAME | TYPE)
-    %               #3 {sECOND TAB ITEMS} (QTE | ILLUSTRATION | NAME | TYPE) 
-
-%   USAGE
-    %   \showTT{}{}{}
-
-\newcommand{\showTABTAB}[3]{\begin{table}[h]\centering\footnotesize\caption{#1}\begin{minipage}[t]{0.45\textwidth}\vspace{0pt}\begin{tblr}{colspec = {Q[c,m] Q[c,m] Q[c,m] Q[c,m]},hlines, vlines}\textbf{Quantity} & \textbf{Illustration} & \textbf{Name} & \textbf{Type} \\  #2 \end{tblr} \end{minipage}\hspace{2pt}\begin{minipage}[t]{0.45\textwidth}\vspace{0pt}\begin{tblr}{colspec = {Q[c,m] Q[c,m] Q[c,m] Q[c,m]},hlines, vlines}\textbf{Quantity} & \textbf{Illustration} & \textbf{Name} & \textbf{Type} \\ #3 \end{tblr}\end{minipage}\end{table}}
-
-%=============================================================%
-
-
-    
-
-
-
-
+% ---------- Deux tableaux côte à côte, centrés, une légende commune ----------
+\NewDocumentCommand{\showTABTAB}{O{4} m m m}{%
+  \begin{table}[h]
+    \centering
+    \footnotesize
+    \caption{#2}
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+      \centering
+      \vspace{0pt}
+      \begin{tblr}{
+        colspec = {*{#1}{Q[c,m]}},
+        hlines, vlines,
+        rowhead = 1,
+      }
+        #3
+      \end{tblr}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+      \centering
+      \vspace{0pt}
+      \begin{tblr}{
+        colspec = {*{#1}{Q[c,m]}},
+        hlines, vlines,
+        rowhead = 1,
+      }
+        #4
+      \end{tblr}
+    \end{minipage}%
+    \hfill
+  \end{table}%
+}
                                                 %+++++++++++++++++++%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     MINIPAGES     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                 %+++++++++++++++++++%
