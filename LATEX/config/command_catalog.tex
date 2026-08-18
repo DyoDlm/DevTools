@@ -5,21 +5,6 @@
 \showBTI{foo.png}{bar.png}
 \showLTI{foo.png}{bar.png}
 
-\showTAB{
-    1 & 2 & 3 & 4\\
-    5 & 6 & 7 & 8\\
-    }
-
-\showTABTAB{
-    Creating a minipage with two equal tabs
-}{
-    1 & 2 & 3 & 4\\
-    5 & 6 & 7 & 8\\
-}{
-    1 & 2 & 3 & 4\\
-    5 & 6 & 7 & 8\\
-    }
-
 
 \showtab[3]{One tab caption}{
   Nom & ID & Format \\
@@ -27,7 +12,13 @@
   Bar & N   & fjs
 }
 
-% Cas B : 4 colonnes (avec illustration)
+\showtab[3]{}{
+  Nom & ID & Format \\
+  Foo & 1   & tct    \\
+  Bar & N   & fjs
+}
+
+
 \showtab[4]{One tab caption}{
   Nom & ID & Format & Illustration \\
   Foo & 1   & tct    & \includegraphics[width=1cm]{foo.png} \\

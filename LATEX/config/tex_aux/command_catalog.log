@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.28)  18 AUG 2026 10:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.28)  18 AUG 2026 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,22 +821,10 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count343
 \enitdp@description=\count344
 )
-
-! LaTeX Error: Command \inform already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.129 ...inform}[1]{\vspace{10pt}{#1}\vspace{3pt}}
-                                                  
-? Q
-OK, entering \batchmode...
-
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-10-10 L3 Experimental document command parser
-)) (./command_catalog.aux)
+))
+(./command_catalog.aux)
 \openout1 = `command_catalog.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -857,6 +845,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -891,7 +880,6 @@ LaTeX Font Info:    ... okay on input line 2.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count345
@@ -905,8 +893,7 @@ LaTeX Font Info:    ... okay on input line 2.
 \MPnumerator=\count349
 \makeMPintoPDFobject=\count350
 \everyMPtoPDFconversion=\toks44
-)
-(/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -916,7 +903,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 2.
- (./command_catalog.out) (./command_catalog.out)
+
+(./command_catalog.out) (./command_catalog.out)
 \@outlinefile=\write4
 \openout4 = `command_catalog.out'.
 
@@ -926,6 +914,7 @@ Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+
 
 LaTeX Warning: File `foo.png' not found on input line 4.
 
@@ -938,9 +927,8 @@ Type  H <return>  for immediate help.
                                                   
 l.4 \showII{foo.png}{bar.png}
                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+? Q
+OK, entering \batchmode...
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -992,80 +980,6 @@ l.6 \showLTI{foo.png}{bar.png}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-! Undefined control sequence.
-l.8 \showTAB
-            {
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Misplaced alignment tab character &.
-l.9     1 &
-            2 & 3 & 4\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.9     1 & 2 &
-                3 & 4\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.9     1 & 2 & 3 &
-                    4\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.10     5 &
-             6 & 7 & 8\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.10     5 & 6 &
-                 7 & 8\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.10     5 & 6 & 7 &
-                     8\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
-
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1075,17 +989,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--12
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <7> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 21.
-> Step: init table outer spec.
-> Step: parse table options.
-> Step: split table.
-> Step: init table inner spec.
-> Step: parse table inner spec.
-> Step: execute table commands.
-> Step: calculate cell and line sizes.
-> Step: build the whole table.
+(Font)              <5> on input line 13.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1108,7 +1014,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-LaTeX Warning: File `foo.png' not found on input line 35.
+LaTeX Warning: File `foo.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `foo.png' not found: using draft setting.
@@ -1117,13 +1023,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `foo.png' not found on input line 35.
+LaTeX Warning: File `foo.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `foo.png' not found: using draft setting.
@@ -1132,13 +1038,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `bar.png' not found on input line 35.
+LaTeX Warning: File `bar.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `bar.png' not found: using draft setting.
@@ -1147,13 +1053,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `bar.png' not found on input line 35.
+LaTeX Warning: File `bar.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `bar.png' not found: using draft setting.
@@ -1162,14 +1068,14 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 > Step: build the whole table.
 
-LaTeX Warning: File `foo.png' not found on input line 35.
+LaTeX Warning: File `foo.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `foo.png' not found: using draft setting.
@@ -1178,13 +1084,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `foo.png' not found on input line 35.
+LaTeX Warning: File `foo.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `foo.png' not found: using draft setting.
@@ -1193,13 +1099,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `bar.png' not found on input line 35.
+LaTeX Warning: File `bar.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `bar.png' not found: using draft setting.
@@ -1208,13 +1114,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `bar.png' not found on input line 35.
+LaTeX Warning: File `bar.png' not found on input line 26.
 
 
 ! Package pdftex.def Error: File `bar.png' not found: using draft setting.
@@ -1223,7 +1129,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 }
+l.26 }
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1285,19 +1191,19 @@ Package rerunfilecheck Info: File `command_catalog.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28058 strings out of 474222
- 557599 string characters out of 5748733
- 1989975 words of memory out of 5000000
- 49903 multiletter control sequences out of 15000+600000
- 570037 words of font info for 73 fonts, out of 8000000 for 9000
+ 28055 strings out of 474222
+ 557526 string characters out of 5748733
+ 1984975 words of memory out of 5000000
+ 49900 multiletter control sequences out of 15000+600000
+ 569026 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,13n,120p,465b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,13n,120p,465b,721s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on command_catalog.pdf (2 pages, 61027 bytes).
+Output written on command_catalog.pdf (2 pages, 57325 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

@@ -1,0 +1,145 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./ifElse.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+No file ifElse.aux.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+Overfull \hbox (11.83107pt too wide) in paragraph at lines 30--30
+[]\T1/cmr/bx/n/14.4 Exemple 1 : com-pa-rer deux sé-quences de contrôle
+
+Overfull \hbox (53.90259pt too wide) in paragraph at lines 50--50
+[]\T1/cmtt/m/n/10 \def\C{\A}          % C se developpe en "Bonjour", mais son *
+texte* est "\A"[] 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/en
+c/dvips/cm-super/cm-super-t1.enc}] [2]
+Overfull \hbox (3.34933pt too wide) in paragraph at lines 139--147
+\T1/cmr/m/n/10 Ici, \T1/cmtt/m/n/10 \expandafter \T1/cmr/m/n/10 force L[]T[]X à
+ dé-ve-lop-per \T1/cmtt/m/n/10 \csname...\endcsname \T1/cmr/m/it/10 avant \T1/c
+mr/m/n/10 d'exé-
+
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 158--158
+[]\T1/cmtt/m/n/10 % xstring : teste si une CHAINE est vide, insensible a certai
+ns cas[] 
+[3]
+Overfull \hbox (20.65369pt too wide) in paragraph at lines 195--195
+[]\T1/cmr/bx/n/14.4 Exemple 9 : ap-pli-ca-tion pra-tique --- notre \T1/cmtt/m/n
+/14.4 \showtab 
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 202--202
+[]  \T1/cmtt/m/n/10 \def\tmpcap{#2}%            on capture l'argument delimite 
+par <...>[] 
+
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 205--205
+[]    \T1/cmtt/m/n/10 \caption{#2}%             on n'appelle \caption QUE si no
+n vide[] 
+[4] (./ifElse.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx144
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1728.
+pfb>
+Output written on ifElse.pdf (4 pages, 203397 bytes).
+Transcript written on ifElse.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./ifElse.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (./ifElse.aux
+) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+Overfull \hbox (11.83107pt too wide) in paragraph at lines 30--30
+[]\T1/cmr/bx/n/14.4 Exemple 1 : com-pa-rer deux sé-quences de contrôle
+
+Overfull \hbox (53.90259pt too wide) in paragraph at lines 50--50
+[]\T1/cmtt/m/n/10 \def\C{\A}          % C se developpe en "Bonjour", mais son *
+texte* est "\A"[] 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/en
+c/dvips/cm-super/cm-super-t1.enc}] [2]
+Overfull \hbox (3.34933pt too wide) in paragraph at lines 139--147
+\T1/cmr/m/n/10 Ici, \T1/cmtt/m/n/10 \expandafter \T1/cmr/m/n/10 force L[]T[]X à
+ dé-ve-lop-per \T1/cmtt/m/n/10 \csname...\endcsname \T1/cmr/m/it/10 avant \T1/c
+mr/m/n/10 d'exé-
+
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 158--158
+[]\T1/cmtt/m/n/10 % xstring : teste si une CHAINE est vide, insensible a certai
+ns cas[] 
+[3]
+Overfull \hbox (20.65369pt too wide) in paragraph at lines 195--195
+[]\T1/cmr/bx/n/14.4 Exemple 9 : ap-pli-ca-tion pra-tique --- notre \T1/cmtt/m/n
+/14.4 \showtab 
+
+Overfull \hbox (22.41028pt too wide) in paragraph at lines 202--202
+[]  \T1/cmtt/m/n/10 \def\tmpcap{#2}%            on capture l'argument delimite 
+par <...>[] 
+
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 205--205
+[]    \T1/cmtt/m/n/10 \caption{#2}%             on n'appelle \caption QUE si no
+n vide[] 
+[4] (./ifElse.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx144
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1728.
+pfb>
+Output written on ifElse.pdf (4 pages, 203397 bytes).
+Transcript written on ifElse.log.

@@ -1,0 +1,238 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{xparse}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{xcolor}
+
+\newcommand{\Resultat}[1]{{\color{blue!60!black}\textbf{Résultat obtenu :} #1}\par}
+\newcommand{\Piege}[1]{{\color{red!70!black}\textbf{Piège :} #1}\par}
+
+\title{Tutoriel : comprendre \texttt{\textbackslash ifx} et la logique de parsing en \LaTeX{}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent
+\texttt{\textbackslash ifx} compare les \emph{deux prochains tokens} du flux
+d'entrée. Contrairement à \texttt{\textbackslash ifnum} ou
+\texttt{\textbackslash ifdim}, il ne développe (« n'expand ») rien avant de
+comparer : il regarde la définition brute (le texte de remplacement) des
+séquences de contrôle, ou le code de catégorie + caractère des tokens simples.
+C'est cette différence qui surprend le plus souvent.
+
+% ============================================================
+\section{Exemple 1 : comparer deux séquences de contrôle identiques}
+\begin{verbatim}
+\def\A{Bonjour}
+\def\B{Bonjour}
+\ifx\A\B VRAI \else FAUX \fi
+\end{verbatim}
+
+\def\A{Bonjour}
+\def\B{Bonjour}
+\Resultat{\ifx\A\B VRAI\else FAUX\fi}
+
+\noindent
+\A{} et \B{} ont exactement le même texte de remplacement (« Bonjour »),
+donc \texttt{\textbackslash ifx} les considère égales, même si ce sont deux
+macros distinctes.
+
+% ============================================================
+\section{Exemple 2 : \texttt{\textbackslash ifx} ne développe pas les macros}
+\begin{verbatim}
+\def\A{Bonjour}
+\def\C{\A}          % C se developpe en "Bonjour", mais son *texte* est "\A"
+\ifx\A\C VRAI \else FAUX \fi
+\end{verbatim}
+
+\def\C{\A}
+\Resultat{\ifx\A\C VRAI\else FAUX\fi}
+
+\Piege{Même si \texttt{\textbackslash C} finit par se développer en
+« Bonjour » (comme \texttt{\textbackslash A}), \texttt{\textbackslash ifx}
+compare le \emph{texte de remplacement immédiat} : « Bonjour » pour
+\texttt{\textbackslash A}, mais « \textbackslash A » pour
+\texttt{\textbackslash C}. Ce sont des tokens différents $\Rightarrow$ FAUX.}
+
+% ============================================================
+\section{Exemple 3 : comparer des tokens de caractère}
+\begin{verbatim}
+\ifx aa VRAI \else FAUX \fi   % deux fois le caractere "a"
+\ifx ab VRAI \else FAUX \fi   % "a" puis "b"
+\end{verbatim}
+
+\Resultat{« aa » $\to$ \ifx aa VRAI\else FAUX\fi
+\quad / \quad « ab » $\to$ \ifx ab VRAI\else FAUX\fi}
+
+\noindent
+Pour des caractères ordinaires (catcode 11 ou 12), \texttt{\textbackslash ifx}
+compare le code de catégorie \emph{et} le code caractère. « a » et « a » sont
+identiques ; « a » et « b » ne le sont pas.
+
+% ============================================================
+\section{Exemple 4 : tester si un argument est vide}
+C'est l'usage le plus fréquent en pratique (et celui qu'on a utilisé dans
+\texttt{\textbackslash showtab}). Le principe : on capture l'argument dans une
+macro temporaire avec \texttt{\textbackslash def}, puis on la compare à une
+macro qu'on sait vide.
+
+\begin{verbatim}
+\def\myempty{}
+\newcommand{\testEmpty}[1]{%
+  \def\tmp{#1}%
+  \ifx\tmp\myempty
+    Vide !%
+  \else
+    Non vide (contenu : #1)%
+  \fi
+}
+\testEmpty{}
+\testEmpty{Bonjour}
+\end{verbatim}
+
+\def\myempty{}
+\newcommand{\testEmpty}[1]{\def\tmp{#1}\ifx\tmp\myempty Vide !\else Non vide (contenu : #1)\fi}
+\Resultat{\testEmpty{} \quad / \quad \testEmpty{Bonjour}}
+
+% ============================================================
+\section{Exemple 5 : le piège des espaces}
+\begin{verbatim}
+\testEmpty{ }   % un argument contenant UN espace
+\end{verbatim}
+
+\Resultat{\testEmpty{ }}
+
+\Piege{Un argument contenant un espace n'est \emph{pas} vide pour
+\texttt{\textbackslash ifx} : le texte de remplacement de
+\texttt{\textbackslash tmp} contient un token « espace », différent du texte
+vraiment vide de \texttt{\textbackslash myempty}. Si vous voulez ignorer les
+espaces, il faut les supprimer avant (ex. avec \texttt{xstring}), voir
+Exemple 7.}
+
+% ============================================================
+\section{Exemple 6 : tester si une commande est définie}
+Un idiome classique : comparer une séquence de contrôle à
+\texttt{\textbackslash relax}, en utilisant \texttt{\textbackslash csname}
+pour éviter une erreur « Undefined control sequence » si elle n'existe pas.
+
+\begin{verbatim}
+\newcommand{\testDefini}[1]{%
+  \expandafter\ifx\csname #1\endcsname\relax
+    #1 n'est pas definie%
+  \else
+    #1 est definie%
+  \fi
+}
+\testDefini{maCommandeInexistante}
+\testDefini{TeX}
+\end{verbatim}
+
+\newcommand{\testDefini}[1]{\expandafter\ifx\csname #1\endcsname\relax #1 n'est pas définie\else #1 est définie\fi}
+\Resultat{\testDefini{maCommandeInexistante} \quad / \quad \testDefini{TeX}}
+
+\noindent
+Ici, \texttt{\textbackslash expandafter} force \LaTeX{} à développer
+\texttt{\textbackslash csname...\textbackslash endcsname} \emph{avant}
+d'exécuter le \texttt{\textbackslash ifx}, sinon celui-ci comparerait
+\texttt{\textbackslash csname} lui-même au lieu de la commande visée.
+\texttt{\textbackslash csname foo\textbackslash endcsname} produit
+\texttt{\textbackslash relax} si \texttt{foo} n'a jamais été définie — d'où
+la comparaison à \texttt{\textbackslash relax}.
+
+% ============================================================
+\section{Exemple 7 : alternatives plus robustes que le \texttt{\textbackslash ifx} manuel}
+Le test manuel « à la \texttt{\textbackslash ifx} » est fragile (sensible aux
+espaces, aux tokens invisibles, etc.). Les packages \texttt{etoolbox} et
+\texttt{xstring} offrent des tests plus sûrs.
+
+\begin{verbatim}
+% etoolbox : teste si une macro est vide OU indefinie
+\ifdefempty{\tmp}{Vide (etoolbox)}{Non vide (etoolbox)}
+
+% xstring : teste si une CHAINE est vide, insensible a certains cas
+\IfBlankTF{#1}{Vide (xstring)}{Non vide (xstring)}
+\end{verbatim}
+
+\def\tmp{}
+\Resultat{etoolbox $\to$ \ifdefempty{\tmp}{Vide}{Non vide}}
+
+\newcommand{\testBlank}[1]{\IfBlankTF{#1}{Vide}{Non vide}}
+\Resultat{xstring, argument vide $\to$ \testBlank{}
+\quad / \quad xstring, argument « Bonjour » $\to$ \testBlank{Bonjour}}
+
+\noindent
+\texttt{etoolbox} et \texttt{xstring} gèrent en interne les cas limites
+(espaces, macros non définies) que le \texttt{\textbackslash ifx} manuel
+gère mal. En pratique, préférez ces outils dès que le comportement doit être
+fiable pour l'utilisateur final d'une commande.
+
+% ============================================================
+\section{Exemple 8 : \texttt{xparse} et les arguments optionnels absents}
+Pour un argument optionnel de \texttt{xparse} (type \texttt{o} ou
+\texttt{O\{\}}), il existe un test dédié, plus sûr que \texttt{\textbackslash
+ifx}, car il distingue « argument omis » de « argument fourni mais vide » :
+
+\begin{verbatim}
+\NewDocumentCommand{\testOptionnel}{o}{%
+  \IfNoValueTF{#1}
+    {Argument omis}
+    {Argument fourni : #1}
+}
+\testOptionnel
+\testOptionnel[Bonjour]
+\end{verbatim}
+
+\NewDocumentCommand{\testOptionnel}{o}{\IfNoValueTF{#1}{Argument omis}{Argument fourni : #1}}
+\Resultat{\testOptionnel \quad / \quad \testOptionnel[Bonjour]}
+
+% ============================================================
+\section{Exemple 9 : application pratique --- notre \texttt{\textbackslash showtab}}
+C'est exactement la logique utilisée pour rendre la légende de
+\texttt{\textbackslash showtab} optionnelle, avec un délimiteur
+\texttt{<...>} personnalisé (type \texttt{D<>\{\}} de \texttt{xparse}) :
+
+\begin{verbatim}
+\NewDocumentCommand{\showtab}{O{4} D<>{} m}{%
+  \def\tmpcap{#2}%            on capture l'argument delimite par <...>
+  \ifx\tmpcap\empty           on compare au texte vide
+  \else
+    \caption{#2}%             on n'appelle \caption QUE si non vide
+  \fi
+  % ... reste de la commande (tableau) ...
+}
+\end{verbatim}
+
+\noindent
+Ici, \texttt{\textbackslash empty} n'a besoin d'aucune définition préalable
+car \LaTeX{} le définit déjà nativement comme une macro vide au niveau du
+noyau — c'est pourquoi ce test fonctionne tel quel dans le préambule d'un
+document standard.
+
+% ============================================================
+\section{Résumé}
+\begin{itemize}
+  \item \texttt{\textbackslash ifx} compare des \textbf{tokens bruts}, jamais
+  des valeurs développées.
+  \item Deux macros sont « égales » pour \texttt{\textbackslash ifx} si leur
+  \textbf{texte de remplacement} est identique token par token --- pas si
+  elles produisent le même résultat final.
+  \item Le test d'emptiness \texttt{\textbackslash ifx\textbackslash
+  tmp\textbackslash empty} est fragile aux espaces ; préférez
+  \texttt{etoolbox} (\texttt{\textbackslash ifdefempty}) ou \texttt{xstring}
+  (\texttt{\textbackslash IfBlankTF}) pour du code destiné à d'autres
+  utilisateurs.
+  \item Pour les arguments optionnels \texttt{xparse}, utilisez
+  \texttt{\textbackslash IfNoValueTF} plutôt que \texttt{\textbackslash ifx} :
+  c'est le mécanisme prévu pour ça, et il distingue « omis » de « vide ».
+  \item \texttt{\textbackslash expandafter} est souvent nécessaire avant
+  \texttt{\textbackslash ifx} quand on compare le résultat d'une expansion
+  (ex. \texttt{\textbackslash csname...\textbackslash endcsname}).
+\end{itemize}
+
+\end{document}
