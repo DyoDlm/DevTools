@@ -2,60 +2,67 @@
 \begin{document}
 
 
-% Sans légende
+\section{Une image}
 \showI{0.6}{monimage.png}
 
-% Avec légende
 \showI<Ma légende>{0.6}{monimage.png}
 
-%
 
+\newpage
+\section{Un tableau}
+\showtab[3]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
+    Foo & 1 & tct \\
+    Bar & N & fjs
+    }
+
+\showtab<La legende du tableau>[3]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
+    Foo & 1 & tct \\
+    Bar & N & fjs
+    }
+
+\showtab[4]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} & \textbf{Illustration} \\
+    Foo & 1 & tct & \includegraphics{foo.png} \\
+    Bar & N & fjs & \includegraphics{foo.png}
+    }
+
+\showtab<La legende du tableau>[4]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} & \textbf{Illustration} \\
+    Foo & 1 & tct & \includegraphics{foo.png} \\
+    Bar & N & fjs & \includegraphics{foo.png}
+    }
+
+\newpage
+\section{Un texte}
+
+\newpage
+\section{Minipages}
+
+\subsection{Deux images}
 \showII{foo.png}{bar.png}
+
+\newpage
+\subsection{Deux tableaux}
+
+
+
+\newpage
+\subsection{Images et textes}
 \showBTI{foo.png}{bar.png}
 \showLTI{foo.png}{bar.png}
 
-
-\showtab[3]{One tab caption}{
-  Nom & ID & Format \\
-  Foo & 1   & tct    \\
-  Bar & N   & fjs
-}
-
-\showtab[3]{}{
-  Nom & ID & Format \\
-  Foo & 1   & tct    \\
-  Bar & N   & fjs
-}
+\newpage
+\subsection{Images et tableaux}
 
 
-\showtab[4]{One tab caption}{
-  Nom & ID & Format & Illustration \\
-  Foo & 1   & tct    & \includegraphics[width=1cm]{foo.png} \\
-  Bar & N   & fjs    & \includegraphics[width=1cm]{bar.png}
-}
-
-\showTABTAB[3]{Ma légende}{
-  \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
-  Foo & 1 & tct \\
-  Bar & N & fjs
-}{
-  \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
-  Baz & 2 & abc \\
-  Qux & M & xyz
-}
-
-\showTABTAB[4]{Ma légende}{
-    \textbf{Nom} & \textbf{ID} & \textbf{Format} & foo \\
-  Foo & 1 & tct & bar\\
-  Bar & N & fjs & bar
-}{
-    \textbf{Nom} & \textbf{ID} & \textbf{Format} & foo\\
-  Baz & 2 & abc & bar \\
-  Qux & M & xyz & bar
-}
+\newpage
+\subsection{Images et textes}
 
 
-
+\newpage
+\subsection{Tableaux et textes}
 
 
 \end{document}

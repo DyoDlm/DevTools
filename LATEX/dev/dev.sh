@@ -3,8 +3,8 @@
 COMPILER="pdflatex"
 SRC_DIR="./srcs"
 LOG_DIR="tex_aux"
-MAIN="command_catalog.tex"
-PDF="command_catalog.pdf"
+MAIN="main.tex"
+PDF="main.pdf"
 
 info()    { echo -e "\033[36m$1\033[0m"; }
 error()   { echo -e "\033[31m$1\033[0m"; }
@@ -97,14 +97,26 @@ get_state() {
 		MD5="md5"
 	fi
 	SRC_STATE=$(find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;)
-	MAIN_STATE=$(find . -maxdepth 1 -name "$MAIN" -exec $MD5 {} \;)
+	MAIN_STATE=$(find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;)
 	echo "$SRC_STATE $MAIN_STATE"
+}
+
+fetch() {
+    cat $SRC_DIR/* > $LOG_DIR/.a1
+    cat $MAIN > .a2
+    cat $LOG_DIR/.a1
+    cat $LOG_DIR/.a2
 }
 
 watch() {
 	STATE_A=""
+    CONTENT_A=""
 	COMPILE="y"
     BACKUP="y"
+    mkdir -p $SRC_DIR
+    mkdir -p $LOG_DIR
+    touch $LOG_DIR/.a1
+    touch $LOG_DIR/.a2
 
 	while true; do
 
@@ -115,9 +127,14 @@ watch() {
 		fi
 
 		STATE_B=$(get_state)
+    
+        CONTENT_B=$(fetch)
 
-		if [[ "$STATE_A" != "$STATE_B" ]]; then
+        echo content B is $B
+
+        if [[ "$STATE_A" != "$STATE_B" ]]; then
 			STATE_A="$STATE_B"
+            CONTENT_A="$CONTENT_B"
 			clear
 			info "───────── $(date) ─────────"
 
@@ -143,6 +160,17 @@ watch() {
 				warning "\nAuto-compilation en pause\n"
 			fi
 
+            echo $STATE_A
+            echo $STATE_B
+            info "────────────────────── INFO ─────────────────────────\n\n"
+
+            info "Compilation Time Estimation : $(cat $LOG_DIR/.last_time)"
+
+            info "FILES MODIFIED : "
+
+            info "$(cat $LOG_DIR/.modified_files)"
+
+            echo 
 			info "────────────────────── WAITING A MODIFICATION ─────────────────────────\n\n"
 			if [[ $COMPILE == "n" ]]; then
 				info "           ────────── p : restart auto-compiling ────────── "
@@ -156,7 +184,5 @@ watch() {
 		fi
 	done
 }
-
-mkdir -p srcs
 
 watch "$@"
