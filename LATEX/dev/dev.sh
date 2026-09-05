@@ -101,11 +101,31 @@ get_state() {
 	echo "$SRC_STATE $MAIN_STATE"
 }
 
-fetch() {
-    cat $SRC_DIR/* > $LOG_DIR/.a1
-    cat $MAIN > .a2
-    cat $LOG_DIR/.a1
-    cat $LOG_DIR/.a2
+get_file_hashes() {
+	if [[ $(uname) == "Linux" ]]; then
+		MD5="md5sum"
+	else
+		MD5="md5"
+	fi
+	find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;
+	find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;
+}
+
+fetch_modifications() {
+	local snapshot="$LOG_DIR/.state_snapshot"
+	local current
+	current=$(get_file_hashes)
+
+	if [[ -f "$snapshot" ]]; then
+		diff "$snapshot" <(echo "$current") \
+			| grep -E '^[<>]' \
+			| awk '{print $NF}' \
+			| sort -u > "$LOG_DIR/.modified_files"
+	else
+		echo "$current" | awk '{print $NF}' | sort -u > "$LOG_DIR/.modified_files"
+	fi
+
+	echo "$current" > "$snapshot"
 }
 
 watch() {
@@ -115,8 +135,6 @@ watch() {
     BACKUP="y"
     mkdir -p $SRC_DIR
     mkdir -p $LOG_DIR
-    touch $LOG_DIR/.a1
-    touch $LOG_DIR/.a2
 
 	while true; do
 
@@ -128,15 +146,12 @@ watch() {
 
 		STATE_B=$(get_state)
     
-        CONTENT_B=$(fetch)
-
-        echo content B is $B
-
         if [[ "$STATE_A" != "$STATE_B" ]]; then
 			STATE_A="$STATE_B"
-            CONTENT_A="$CONTENT_B"
 			clear
 			info "───────── $(date) ─────────"
+            
+            fetch_modifications
 
 			if [[ $COMPILE == "y" ]]; then
 				rm -f "$PDF"
@@ -165,10 +180,12 @@ watch() {
             info "────────────────────── INFO ─────────────────────────\n\n"
 
             info "Compilation Time Estimation : $(cat $LOG_DIR/.last_time)"
-
+            
+            echo
+            
             info "FILES MODIFIED : "
 
-            info "$(cat $LOG_DIR/.modified_files)"
+            warning "$(cat $LOG_DIR/.modified_files)"
 
             echo 
 			info "────────────────────── WAITING A MODIFICATION ─────────────────────────\n\n"
