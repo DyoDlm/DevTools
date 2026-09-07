@@ -25,6 +25,7 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric}
 \usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage{xparse}
 \usepackage[T1]{fontenc}
 \captionsetup[figure]{labelfont=bf,labelsep=colon}
@@ -35,12 +36,6 @@
 \titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
 
 %   Yellow circle
-\newcommand{\yellowcircle}[1]{%
-  \tikz[baseline=-0.6ex]{%
-    \node[draw,circle,fill=yellow!80,inner sep=1.2pt] {\footnotesize #1};%
-  }%
-}
-\newcommand{\note}[1]{\textit{#1}}
 \newcommand{\warning}[1]{\yellowcircle{WARNING !} \note{#1}}
 
 
@@ -48,7 +43,14 @@
 \newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
 \newcommand{\green}[1]{\textcolor{green}{#1}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
-\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue{La legende du tableau{#1}}
+
+
+
+
+
+
+
 
 
 
@@ -61,7 +63,7 @@
                                                 %+++++++++++++++++++++++++++%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       TEXTS & UTILS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                 %+++++++++++++++++++++++++++%
-
+   
 %=============================================================%
 %   CMD :
     %   \itm
@@ -82,7 +84,7 @@
 %   Description :
     %   Format text between TAB and IMG
 
-%   ARGS :
+%   ARGS : 
     %   #1 {TEXT}
 
 %   Usage : \inform{...}
@@ -95,6 +97,9 @@
 
 
 
+
+
+
                                                 %+++++++++++++++++++%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        TABS       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                 %+++++++++++++++++++%
@@ -102,16 +107,18 @@
 %=============================================================%
 %   CMD :   showtab
 
-%   DESCRIPTION :
+%   DESCRIPTION : 
     %   NO CAPTION SUB-BOM'S ITEM TAB--> ARGS
-
+    
 %   ARGS :
     %   [Nb of items]
     %   #1 {Caption} (optional
-    %   #2 {ITEMS}
+    %   #2 {ITEMS} 
 
 %   USAGE :
     %   \showtab{...}
+
+\usepackage{tabularray}
 
 % ---------- Tableau seul, centré, avec légende ----------
 \NewDocumentCommand{\showtab}{O{4} m m}{%
@@ -130,7 +137,7 @@
 }
 
 % ---------- Deux tableaux côte à côte, centrés, une légende commune (optionnelle) ----------
-\NewDocumentCommand{\showTABTAB}{O{4} m m m}{%
+\NewDocumentCommand{{\showTABTAB}{O{4} m m m}{%
   \begin{table}[h]
     \centering
     \footnotesize
@@ -171,19 +178,18 @@
 
 %=============================================================%
 %   CMD :
-    %   showI
+    %   showimage
 
 %   DESCRIPTION :
     %   Format one image
 
 %   ARGS :
-    %   <CAPTION> (optional)
     %   #1 {SIZE}
+%   #2 {CAPTION} (optional)
     %   #2 {path_to_image}
 
 %   Usage :
-    %   \showI{size}{path_to_the_img}
-    %   \showI<caption>{size}{path_to_the_img}
+    %   \showone{path_to_the_img}{size}
 
 \NewDocumentCommand{\showI}{d<> m m}{%
   \begin{figure}[H]
@@ -211,9 +217,12 @@
 
 %   ARGS
     %   #1 {IMG1} (size: 0.45)
-    %   #2 {IMG2} (size: 0.45)
+    %   #2 {IMG2} (size: 0.45) 
 
-%   Usage : \showII{path_to_1}{path_to_2}
+%   Usage : \showtwo{path_to_1}{path_to_2}
+
+%\newcommand{\showII}[2]{\begin{center}\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
 
 \NewDocumentCommand{\showII}{d<> m d<> m}{%
   \begin{center}
@@ -247,7 +256,7 @@
     %   #2 {IMG2} (size: 0.35)
 
 %   Usage :
-    %   \showBII{path_to_1}{path_to_2}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showBII}[2]{\begin{center}\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
 
@@ -266,10 +275,10 @@
     %   #2 {IMG2} (size: 0.55)
 
 %   Usage :
-    %   \showLII{path_to_1}{path_to_2}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showLII}[2]{\begin{center}\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
-
+    
 %=============================================================%
 
 
@@ -285,7 +294,7 @@
     %   #2 {TXT} (size: 0.45)
 
 %   Usage :
-    %   \showIT{path_to_1}{text}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showIT}[2]{\begin{center}\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.45\textwidth} #2 \end{minipage}\end{center}}
 
@@ -304,7 +313,7 @@
     %   #2 {IMG} (size: 0.45)
 
 %   Usage :
-    %   \showTI{text}{path_to_1}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showTI}[2]{\begin{center}\begin{minipage}{0.45\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
 
@@ -323,7 +332,7 @@
     %   #2 {TXT} (size: 0.35)
 
 %   Usage :
-    %   \showBIT{path_to_1}{text}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showBIT}[2]{\begin{center}\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.35\textwidth} #2 \end{minipage}\end{center}}
 
@@ -336,13 +345,13 @@
 
 %   DESCRIPTION :
     %   BIG TXT / LITTLE IMG
-
+    
 %   ARGS :
     %   #1 {TXT} (size: 0.55)
     %   #2 {IMG} (size: 0.35)
 
 %   Usage :
-    %   \showBTI{text}{path_to_1}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showBTI}[2]{\begin{center}\begin{minipage}{0.55\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
 
@@ -361,7 +370,7 @@
     %   #2 {TXT} (size: 0.55)
 
 %   Usage :
-    %   \showLIT{path_to_1}{text}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showLIT}[2]{\begin{center}\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.55\textwidth} #2 \end{minipage}\end{center}}
 
@@ -372,7 +381,7 @@
 %   CMD :
     %   showLTI
 
-%   DESCRIPTION :
+%   DESCRIPTION : 
     %    LITTLE TXT / BIG IMG
 
 %   ARGS :
@@ -380,8 +389,9 @@
     %   #2 {IMG} (size: 0.55)
 
 %   Usage :
-    %   \showLTI{text}{path_to_1}
+    %   \showtwo{path_to_1}{path_to_2}
 
 \newcommand{\showLTI}[2]{\begin{center}\begin{minipage}{0.35\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
 
 %=============================================================%
+
