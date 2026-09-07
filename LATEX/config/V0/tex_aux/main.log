@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.28)  23 AUG 2026 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  7 SEP 2026 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**command_catalog.tex
-(./command_catalog.tex
+**main.tex
+(./main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (./config.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -828,7 +828,7 @@ Package: xparse 2023-10-10 L3 Experimental document command parser
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ))
 Runaway argument?
-{\textcolor {blue{La legende du tableau{##1}} \par \par \par \par \par \ETC.
+{\tikz [baseline=-0.6ex]{\node [draw,circle,fill=yellow!80,inner sep=\ETC.
 ! File ended while scanning use of \@argdef.
 <inserted text> 
                 \par 
@@ -836,8 +836,8 @@ l.1 \input{config}
                   
 ? Q
 OK, entering \batchmode...
- (./command_catalog.aux)
-\openout1 = `command_catalog.aux'.
+ (./main.aux)
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
@@ -924,9 +924,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 2.
- (./command_catalog.out) (./command_catalog.out)
+ (./main.out) (./main.out)
 \@outlinefile=\write4
-\openout4 = `command_catalog.out'.
+\openout4 = `main.out'.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ninecolors/ninecolors.sty
@@ -1369,8 +1369,8 @@ and I'll forget about whatever was undefined.
 
  [4] [5]
 ! Undefined control sequence.
-l.53 \showBTI
-             {foo.png}{bar.png}
+l.55 \showXI
+            {La Commune de Paris  est la plus importante des communes insurr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1378,43 +1378,67 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.54 \showLTI
-             {foo.png}{bar.png}
+l.60 \showIX
+            {Ce projet d'organisation politique de la République française...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
- [6] [7] [8]
+ [6]
+! Undefined control sequence.
+l.65 \showLXI
+             {fsjn}{bar.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package caption Warning: Unused \captionsetup[figure] on input line 31.
+! Undefined control sequence.
+l.70 \showBXI
+             {La révolution sociale espagnole de 1936 (revolución social e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+ [7] [8] [9]
+
+Package caption Warning: Unused \captionsetup[figure] on input line 30.
 See the caption package documentation for explanation.
 
- [9] (./command_catalog.aux)
+ [10] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `command_catalog.out' has not changed.
+Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 48B9DDFE71B18E1CA564FE09ACE0A79B;1194.
  ) 
 Here is how much of TeX's memory you used:
- 28145 strings out of 474222
- 555922 string characters out of 5748733
+ 28147 strings out of 474222
+ 555769 string characters out of 5748733
  1927975 words of memory out of 5000000
- 49970 multiletter control sequences out of 15000+600000
+ 49971 multiletter control sequences out of 15000+600000
  563414 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,5n,120p,465b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,5n,120p,670b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on command_catalog.pdf (9 pages, 84363 bytes).
+Output written on main.pdf (10 pages, 95042 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,110 @@
+\input{config}
+\begin{document}
+
+
+\section{Une image}
+\showI{0.6}{monimage.png}
+
+\showI<Ma légende>{0.6}{monimage.png}
+
+
+\newpage
+\section{Un tableau}
+\showtab[3]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
+    Foo & 1 & tct \\
+    Bar & N & fjs
+    }
+
+\showtab<La legende du tableau>[3]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} \\
+    Foo & 1 & tct \\
+    Bar & N & fjs
+    }
+
+\showtab[4]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} & \textbf{Illustration} \\
+    Foo & 1 & tct & \includegraphics{foo.png} \\
+    Bar & N & fjs & \includegraphics{foo.png}
+    }
+
+\showtab<La legende du tableau>[4]{
+    \textbf{Nom} & \textbf{ID} & \textbf{Format} & \textbf{Illustration} \\
+    Foo & 1 & tct & \includegraphics{foo.png} \\
+    Bar & N & fjs & \includegraphics{foo.png}
+    }
+
+\newpage
+\section{Un texte}
+
+\newpage
+\section{Minipages}
+
+\subsection{Deux images}
+\showII{foo.png}{bar.png}
+
+\newpage
+\subsection{Deux tableaux}
+
+
+
+\newpage
+\subsection{Images et textes}
+
+\begin{center} \textbf{showXI} \end{center}
+\showXI{La Commune de Paris  est la plus importante des communes insurrectionnelles de France en 1870-1871, qui dura 72 jours, du 18 mars 1871 à la « Semaine sanglante » du 21 au 28 mai 1871. Cette insurrection, faisant suite aux communes de Lyon et de Marseille, refusa de reconnaître le gouvernement issu de l'Assemblée nationale, qui venait d'être élue au suffrage universel masculin, et choisit d'ébaucher pour la ville une organisation de type proudhonien, blanquiste et jacobin (des trois courants de pensée majoritaires de ces insurrections) fondée sur la démocratie directe, qui donna naissance au communalisme.}{foo.png}
+
+\vspace{1cm}
+
+\begin{center} \textbf{showIX} \end{center}
+\showIX{Ce projet d'organisation politique de la République française visant à unir les différentes communes insurrectionnelles ne fut jamais mis en œuvre du fait de leur écrasement lors de la campagne de 1871 à l'intérieur dont la Semaine sanglante, marquée par d'importants incendies, constitue l'épisode parisien et la répression la plus célèbre.}{foo.png}
+
+\newpage
+
+\begin{center} \textbf{showLXI} \end{center}
+\showLXI{fsjn}{bar.png}
+
+\vspace{1cm}
+
+\begin{center} \textbf{showBXI} \end{center}
+\showBXI{La révolution sociale espagnole de 1936 (revolución social española de 1936), couramment désignée sous le nom de révolution espagnole (revolución española)[1], englobe tous les événements de type révolutionnaire, principalement rattachés au mouvement anarchiste et syndicaliste révolutionnaire déclenchés en Espagne, durant la guerre civile, en réponse à la tentative de coup d'État militaire les 17 et 18 juillet 1936.\newline
+
+Les bases idéologiques de cette révolution se rattachent très clairement à l'anarcho-syndicalisme et à l'anarchisme, extrêmement puissant en Espagne dans les années 1930, mais aussi au marxisme révolutionnaire.}{bar.png}
+
+
+\newpage
+\subsection{Images et tableaux}
+
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+
+
+
+
+\newpage
+\subsection{Images et textes}
+
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+
+
+
+
+\newpage
+\subsection{Tableaux et textes}
+
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+\begin{center} \textbf{showLTI} \end{center}
+
+
+
+\end{document}
