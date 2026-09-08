@@ -84,13 +84,13 @@
 \newpage
 \section{Minipages}
 
-\subsection{Split command}
+\subsection{Split command -- Minipages modulables}
 
-\note{Creer une minipage en soom (defaut 50/50)}
+\note{$\backslash$split\{mini1\}\{mini2\} (default 50/50)}
 \split{La Commune de Paris  est la plus importante des communes insurrectionnelles de France en 1870-1871, qui dura 72 jours, du 18 mars 1871 à la « Semaine sanglante » du 21 au 28 mai 1871. Cette insurrection, faisant suite aux communes de Lyon et de Marseille, refusa de reconnaître le gouvernement issu de l'Assemblée nationale, qui venait d'être élue au suffrage universel masculin, et choisit d'ébaucher pour la ville une organisation de type proudhonien, blanquiste et jacobin (des trois courants de pensée majoritaires de ces insurrections) fondée sur la démocratie directe, qui donna naissance au communalisme.}{\image[0.4]{lion.png}}
 
 
-\note{Choisi la taille de la minipage}
+\note{$\backslash$split[0...1]\{mini1\}\{mini2\} (exemple avec 0.7)}
 \split[0.8]{Cette insurrection, faisant suite aux communes de Lyon et de Marseille, refusa de reconnaître le gouvernement issu de l'Assemblée nationale, qui venait d'être élue au suffrage universel masculin, et choisit d'ébaucher pour la ville une organisation de type proudhonien, blanquiste et jacobin (des trois courants de pensée majoritaires de ces insurrections) fondée sur la démocratie directe, qui donna naissance au communalisme.}{\image[0.4]{singe.jpeg}}
 
 
@@ -104,20 +104,49 @@
 
 
 
-\subsection{Minipages par defaut}
+\subsection{Show command -- Minipages par defaut}
 
 La logique de la commande show ressemble a celle de split. Or si on connait d'avance la nature du contenu qu'on veut illustrer, on a la liberté de prédéfinir la nature des minipages. Par exemple, au lieu d'utiliser : \note{$\backslash$split\{$\backslash$image\{\}\}\{$\backslash$image\{\}\}}
     on peut juste call : \note{$\backslash$showII\{\}\{\}}
     ou encore si on veut plus grand a droite : \note{$\backslash$showBII\{\}\{\}}
     ou si on veut plus petit a droite : \note{$\backslash$showLII\{\}\{\}}
-\vspace{1cm}
+    \newline
+    Quand on implemente images ou tableau, nous pouvons legender le contenu avec $\langle \rangle$ avant les brackets \{\} tel que 
+    \note{$\backslash$showLII$\langle$Legende 1$\rangle$\{IMG1\}$\langle$Legende 2$\rangle$\{IMG2\}}
+    Les tailles par defauts des minipages B (big) sont 0.55 et L (little) sont 0.35. Toutefois, nous sommes libre de les redefinir au cours du document pour $\backslash$big tel que :
+    \note{$\backslash$renewcommand\{$\backslash$big\}\{0...1\}}
+    ou encore pour $\backslash$little tel que : 
+    \note{$\backslash$renewcommand\{$\backslash$little\}\{0...1\}}
+
+    Attention par contre a que la somme \textit{little + big} ne depasse pas 1, risques de debordement sinon. 
+
+    \newpage
 \subsubsection{Images - Images}
 \vspace{1cm}
+
 \note{$\backslash$showII\{IMG1\}\{IMG2\}}
 \showII{Ours.png}{Abeille.jpeg}
+\vspace{1cm}
 
+
+Et comme je l'ai decrit dans la page d'avant, je suis libre d'implementer une legende pour mes images avec la meme commande !.
+
+\vspace{1cm}
+\showII<Legende de l'ours>{Ours.png}<Legende de l'abeille>{Abeille.png}
 
 \newpage
+Je peux aussi le faire pour qu'une image :
+\showII{Ours.png}<Legende de l'abeille>{Abeille.png}
+\vspace{1cm}
+
+Pour l'une comme pour l'autre
+\vspace{1cm}
+
+\showII<Legende de l'ours>{Ours.png}{Abeille.png}
+\vspace{1cm}
+Ca sera pareil pour le reste des commandes.
+\newpage
+
 
 \note{$\backslash$showBII\{IMG1\}\{IMG2\}}
 
