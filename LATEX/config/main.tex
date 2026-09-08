@@ -5,6 +5,8 @@
 
 \section{Catalogue}
 
+\note{Les $\langle \rangle$ indiquent que l'argument est optionnel, notamment pour les legendes pour tableaux/images.}
+\vspace{1cm}
 \note{$\backslash$image\{foo.png\}}
 \note{$\backslash$image[taille]\{foo.png\}}
 \note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\}}
@@ -19,7 +21,7 @@
 \note{$\backslash$showBII\{IMG1\}\{IMG2\}}
 \note{$\backslash$showLII\{IMG1\}\{IMG2\}}
 \vspace{0.5cm}
-\note{$\backslash$showIX\{IMG1\}\{ANYTHING\}}
+\note{$\backslash$showIX$\langle$\{IMG1\}$\rangle$\{ANYTHING\}}
 \note{$\backslash$showXI\{ANYTHING\}\{IMG2\}}
 \note{$\backslash$showBIX\{IMG1\}\{ANYTHING\}}
 \note{$\backslash$showBXI\{ANYTHING\}\{IMG2\}}
@@ -52,12 +54,16 @@
 
 \section{Tableaux}
 
+\vspace{1cm}
+
 \note{$\backslash$tableau[colonnes]\{items\} -- Affiche un tableau tel que t'as la}
 \tableau[2]{
     echantillon & force \\
     1 & 2 \\
     3 & 4 \\
 }
+
+\vspace{1cm}
 
 \note{$\backslash$tableau $\langle$ legende $\rangle$[colonnes]\{items\}}
 \tableau<donnees de l'experience abc>[2]{
@@ -66,7 +72,7 @@
     3 & 4 \\
 }
 
-\vspace{0.5cm}
+\vspace{1cm}
 
 \tableau<donnees de l'experience abc>[4]{
     echantillon & force & foo & bar \\
@@ -104,7 +110,7 @@ La logique de la commande show ressemble a celle de split. Or si on connait d'av
     on peut juste call : \note{$\backslash$showII\{\}\{\}}
     ou encore si on veut plus grand a droite : \note{$\backslash$showBII\{\}\{\}}
     ou si on veut plus petit a droite : \note{$\backslash$showLII\{\}\{\}}
-
+\vspace{1cm}
 \subsubsection{Images - Images}
 \vspace{1cm}
 \note{$\backslash$showII\{IMG1\}\{IMG2\}}
@@ -116,16 +122,16 @@ La logique de la commande show ressemble a celle de split. Or si on connait d'av
 \note{$\backslash$showBII\{IMG1\}\{IMG2\}}
 
 \showBII{Ours.png}{Abeille.jpeg}
-
+\vspace{1cm}
 \note{$\backslash$showLII\{IMG1\}\{IMG2\}}
 \showLII{Ours.png}{Abeille.jpeg}
 
 \newpage
 \subsubsection{Image - Texte}
-
+\vspace{1cm}
 \note{$\backslash$showIX\{IMG1\}\{ANYTHING\}}
 \showIX{Corbeau.png}{La révolution sociale espagnole de 1936 (revolución social española de 1936), couramment désignée sous le nom de révolution espagnole (revolución española)[1], englobe tous les événements de type révolutionnaire, principalement rattachés au mouvement anarchiste et syndicaliste révolutionnaire déclenchés en Espagne, durant la guerre civile, en réponse à la tentative de coup d'État militaire les 17 et 18 juillet 1936.}
-
+\vspace{1cm}
 \note{$\backslash$showXI\{ANYTHING\}\{IMG2\}}
 \showXI{Les bases idéologiques de cette révolution se rattachent très clairement à l'anarcho-syndicalisme et à l'anarchisme, extrêmement puissant en Espagne dans les années 1930, mais aussi au marxisme révolutionnaire.}{Renard.jpeg}
 
@@ -134,13 +140,16 @@ La logique de la commande show ressemble a celle de split. Or si on connait d'av
 \note{$\backslash$showBIX\{IMG1\}\{ANYTHING\}}
 \showBIX{Crobeau.png}{Ce mouvement a donné lieu à des collectivisations paysannes et ouvrières, très importantes dans le domaine de l'agriculture et de l'industrie, en Espagne républicaine.}
 
+\vspace{1cm}
 \note{$\backslash$showBXI\{ANYTHING\}\{IMG2\}}
 \showBXI{La révolution algérienne (1954-1962) contre la domination coloniale française fut l’une des luttes pour l’indépendance les plus violentes du XXe siècle. Toutefois, la violence qui marqua cette lutte ne fut pas une fin en soi, mais un moyen nécessaire pour obtenir l’indépendance. Elle résultait de l’oppression brutale subie par les Algériens pendant plus d’un siècle sous l’occupation française, alors que les tentatives de résistance pacifique avaient constamment échoué à produire un changement significatif}{Renard.jpeg}
 
 \newpage
 
 \note{$\backslash$showLXI\{ANYTHING\}\{IMG2\}}
-\showLXI{Pourtant, bien que la lutte armée soit souvent mise en avant, elle n’a pas été l’unique facteur de la victoire. La participation de divers groupes sociaux—athlètes, écrivains, poètes, intellectuels et diplomates—a été cruciale pour créer un écosystème qui a maintenu cette révolution. Cet effort collectif fut essentiel au succès de l’Algérie, mais aujourd’hui, il semble que le rôle de ces groupes ait été oublié. Si l’Algérie veut prospérer dans le futur, ses élites doivent retrouver leur responsabilité dans leurs domaines respectifs, à condition qu’il y ait une liberté d’expression, qui, aujourd’hui, fait défaut.}{Renardjpeg}
+\showLXI{Pourtant, bien que la lutte armée soit souvent mise en avant, elle n’a pas été l’unique facteur de la victoire. La participation de divers groupes sociaux—athlètes, écrivains, poètes, intellectuels et diplomates—a été cruciale pour créer un écosystème qui a maintenu cette révolution. Cet effort collectif fut essentiel au succès de l’Algérie, mais aujourd’hui, il semble que le rôle de ces groupes ait été oublié. Si l’Algérie veut prospérer dans le futur, ses élites doivent retrouver leur responsabilité dans leurs domaines respectifs, à condition qu’il y ait une liberté d’expression, qui, aujourd’hui, fait défaut.}{Renard.jpeg}
+
+\vspace{0.5cm}
 
 \note{$\backslash$showLIX\{IMG1\}\{ANYTHING\}}
 \showLIX{Corbeau.png}{La violence qui a marqué la révolution algérienne doit être comprise dans le contexte du colonialisme français. L’occupation de l’Algérie par la France débuta en 1830, et dès le départ, les autorités françaises mirent en place un régime qui marginalisait et exploitait systématiquement la population locale. Les terres étaient confisquées aux Algériens pour être attribuées aux colons français, et les Algériens étaient privés de droits politiques et d’opportunités économiques}
