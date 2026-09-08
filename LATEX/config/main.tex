@@ -1,23 +1,50 @@
-\documentclass{article}
+\documentclass[12pt,a4paper]{article}
 \input{config.tex}   % charge la librairie de commandes
 
 \begin{document}
+
+\section{Catalogue}
+
+\note{$\backslash$image\{foo.png\}}
+\note{$\backslash$image[taille]\{foo.png\}}
+\note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\}}
+\vspace{0.5cm}
+\note{$\backslash$tableau[colonnes]\{items\}}
+\note{$\backslash$tableau $\langle$ legende $\rangle$[colonnes]\{items\}}
+\vspace{0.5cm}
+\note{$\backslash$split\{ANYTHING\}\{ANYTHING\}}
+\note{$\backslash$split[size]\{ANYTHING\}\{ANYTHING\}}
+\vspace{0.5cm}
+\note{$\backslash$showII\{IMG1\}\{IMG2\}}
+\note{$\backslash$showBII\{IMG1\}\{IMG2\}}
+\note{$\backslash$showLII\{IMG1\}\{IMG2\}}
+\vspace{0.5cm}
+\note{$\backslash$showIX\{IMG1\}\{ANYTHING\}}
+\note{$\backslash$showXI\{ANYTHING\}\{IMG2\}}
+\note{$\backslash$showBIX\{IMG1\}\{ANYTHING\}}
+\note{$\backslash$showBXI\{ANYTHING\}\{IMG2\}}
+\note{$\backslash$showLXI\{ANYTHING\}\{IMG2\}}
+\note{$\backslash$showLIX\{IMG1\}\{ANYTHING\}}
+
+
+
+\newpage
 
 \section{Images}
 
 \vspace{0.5cm}
 
-\note{image\{foo.png\} -- Affiche une image avec centrage par defaut}
+\note{$\backslash$image\{foo.png\} -- Affiche une image avec centrage par defaut}
 \image{pingoin.png}
 
 \vspace{0.5cm}
 
-\note{image[taille]\{foo.png\} -- Affiche l'image en definissant la taille}
+\note{$\backslash$image[taille]\{foo.png\} -- Affiche l'image en definissant la taille}
 \image[0.2]{Pingoing.png}
 
 \vspace{0.5cm}
 
-\note{image$\langle$ legende $\rangle$[taille]\{foo.png\} -- Affiche une image avec legende}
+\note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\} -- Affiche une image avec legende}
 \image<Photo d'un pingouin>[0.2]{pingoin.png}
 
 
@@ -25,14 +52,14 @@
 
 \section{Tableaux}
 
-\note{tableau[colonnes]{items} -- Affiche un tableau tel que t'as la}
+\note{$\backslash$tableau[colonnes]\{items\} -- Affiche un tableau tel que t'as la}
 \tableau[2]{
     echantillon & force \\
     1 & 2 \\
     3 & 4 \\
 }
 
-\note{tableau $\langle$ legende $\rangle$[colonnes]{items}}
+\note{$\backslash$tableau $\langle$ legende $\rangle$[colonnes]\{items\}}
 \tableau<donnees de l'experience abc>[2]{
     echantillon & force \\
     1 & 2 \\
@@ -53,27 +80,97 @@
 
 \subsection{Split command}
 
+\note{Creer une minipage en soom (defaut 50/50)}
 \split{La Commune de Paris  est la plus importante des communes insurrectionnelles de France en 1870-1871, qui dura 72 jours, du 18 mars 1871 à la « Semaine sanglante » du 21 au 28 mai 1871. Cette insurrection, faisant suite aux communes de Lyon et de Marseille, refusa de reconnaître le gouvernement issu de l'Assemblée nationale, qui venait d'être élue au suffrage universel masculin, et choisit d'ébaucher pour la ville une organisation de type proudhonien, blanquiste et jacobin (des trois courants de pensée majoritaires de ces insurrections) fondée sur la démocratie directe, qui donna naissance au communalisme.}{\image[0.4]{lion.png}}
 
-\vspace{1cm}
 
-\split[0.6]{Ce projet d'organisation politique de la République française visant à unir les différentes communes insurrectionnelles ne fut jamais mis en œuvre du fait de leur écrasement lors de la campagne de 1871 à l'intérieur dont la Semaine sanglante, marquée par d'importants incendies, constitue l'épisode parisien et la répression la plus célèbre.}{foo.png}{Il constitue une extraordinaire inspiration pour bon nombre d'humains au bon sens.}
+\note{Choisi la taille de la minipage}
+\split[0.8]{Cette insurrection, faisant suite aux communes de Lyon et de Marseille, refusa de reconnaître le gouvernement issu de l'Assemblée nationale, qui venait d'être élue au suffrage universel masculin, et choisit d'ébaucher pour la ville une organisation de type proudhonien, blanquiste et jacobin (des trois courants de pensée majoritaires de ces insurrections) fondée sur la démocratie directe, qui donna naissance au communalisme.}{\image[0.4]{singe.jpeg}}
 
-\newline
-La révolution sociale espagnole de 1936 (revolución social española de 1936), couramment désignée sous le nom de révolution espagnole (revolución española)[1], englobe tous les événements de type révolutionnaire, principalement rattachés au mouvement anarchiste et syndicaliste révolutionnaire déclenchés en Espagne, durant la guerre civile, en réponse à la tentative de coup d'État militaire les 17 et 18 juillet 1936.\newline
+
+\note{Ca marche aussi avec des images et tableaux}
+\split{\image{Renard.png}}{\vspace{0.4cm} \tableau[4]{prout & prout & prout & prout \\ 1 & 2  & 3 & 4 \\ 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \\}}
+
+\newpage
+
+
+
+
 
 
 \subsection{Minipages par defaut}
 
+La logique de la commande show ressemble a celle de split. Or si on connait d'avance la nature du contenu qu'on veut illustrer, on a la liberté de prédéfinir la nature des minipages. Par exemple, au lieu d'utiliser : \note{$\backslash$split\{$\backslash$image\{\}\}\{$\backslash$image\{\}\}}
+    on peut juste call : \note{$\backslash$showII\{\}\{\}}
+    ou encore si on veut plus grand a droite : \note{$\backslash$showBII\{\}\{\}}
+    ou si on veut plus petit a droite : \note{$\backslash$showLII\{\}\{\}}
+
 \subsubsection{Images - Images}
+\vspace{1cm}
+\note{$\backslash$showII\{IMG1\}\{IMG2\}}
+\showII{Ours.png}{Abeille.jpeg}
 
-\subsubsection{Tableau - Tableau}
 
+\newpage
+
+\note{$\backslash$showBII\{IMG1\}\{IMG2\}}
+
+\showBII{Ours.png}{Abeille.jpeg}
+
+\note{$\backslash$showLII\{IMG1\}\{IMG2\}}
+\showLII{Ours.png}{Abeille.jpeg}
+
+\newpage
 \subsubsection{Image - Texte}
 
+\note{$\backslash$showIX\{IMG1\}\{ANYTHING\}}
+\showIX{Corbeau.png}{La révolution sociale espagnole de 1936 (revolución social española de 1936), couramment désignée sous le nom de révolution espagnole (revolución española)[1], englobe tous les événements de type révolutionnaire, principalement rattachés au mouvement anarchiste et syndicaliste révolutionnaire déclenchés en Espagne, durant la guerre civile, en réponse à la tentative de coup d'État militaire les 17 et 18 juillet 1936.}
+
+\note{$\backslash$showXI\{ANYTHING\}\{IMG2\}}
+\showXI{Les bases idéologiques de cette révolution se rattachent très clairement à l'anarcho-syndicalisme et à l'anarchisme, extrêmement puissant en Espagne dans les années 1930, mais aussi au marxisme révolutionnaire.}{Renard.jpeg}
+
+\newpage
+
+\note{$\backslash$showBIX\{IMG1\}\{ANYTHING\}}
+\showBIX{Crobeau.png}{Ce mouvement a donné lieu à des collectivisations paysannes et ouvrières, très importantes dans le domaine de l'agriculture et de l'industrie, en Espagne républicaine.}
+
+\note{$\backslash$showBXI\{ANYTHING\}\{IMG2\}}
+\showBXI{La révolution algérienne (1954-1962) contre la domination coloniale française fut l’une des luttes pour l’indépendance les plus violentes du XXe siècle. Toutefois, la violence qui marqua cette lutte ne fut pas une fin en soi, mais un moyen nécessaire pour obtenir l’indépendance. Elle résultait de l’oppression brutale subie par les Algériens pendant plus d’un siècle sous l’occupation française, alors que les tentatives de résistance pacifique avaient constamment échoué à produire un changement significatif}{Renard.jpeg}
+
+\newpage
+
+\note{$\backslash$showLXI\{ANYTHING\}\{IMG2\}}
+\showLXI{Pourtant, bien que la lutte armée soit souvent mise en avant, elle n’a pas été l’unique facteur de la victoire. La participation de divers groupes sociaux—athlètes, écrivains, poètes, intellectuels et diplomates—a été cruciale pour créer un écosystème qui a maintenu cette révolution. Cet effort collectif fut essentiel au succès de l’Algérie, mais aujourd’hui, il semble que le rôle de ces groupes ait été oublié. Si l’Algérie veut prospérer dans le futur, ses élites doivent retrouver leur responsabilité dans leurs domaines respectifs, à condition qu’il y ait une liberté d’expression, qui, aujourd’hui, fait défaut.}{Renardjpeg}
+
+\note{$\backslash$showLIX\{IMG1\}\{ANYTHING\}}
+\showLIX{Corbeau.png}{La violence qui a marqué la révolution algérienne doit être comprise dans le contexte du colonialisme français. L’occupation de l’Algérie par la France débuta en 1830, et dès le départ, les autorités françaises mirent en place un régime qui marginalisait et exploitait systématiquement la population locale. Les terres étaient confisquées aux Algériens pour être attribuées aux colons français, et les Algériens étaient privés de droits politiques et d’opportunités économiques}
+
+
+\newpage
+\subsubsection{Tableau - Tableau}
+\note{Working on it}
+\showTT{}{}
+\showBTT{}{}
+\showLTT{}{}
+
 \subsubsection{Image - Tableau}
+\note{Working on it}
+\showIT{}{}
+\showTI{}{}
+\showBTI{}{}
+\showBIT{}{}
+\showLTI{}{}
+\showLIT{}{}
 
 \subsubsection{Texte - Tableau}
+\note{Working on it}
+\showTX{}{}
+\showXT{}{}
+\showBTX{}{}
+\showBXT{}{}
+\showLTX{}{}
+\showLXT{}{}
+
 
 \end{document}
 

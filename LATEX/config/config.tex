@@ -94,9 +94,34 @@
 
 
 
+
+% DEFAULT COMMANDS
+
 \NewDocumentCommand{\note}{m}{%
     \begin{center}
         \textbf{#1}
     \end{center}%
 }
+
+
+
+\newcommand{\showIX}[2]{\begin{center}\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.45\textwidth} #2 \end{minipage}\end{center}}
+
+\newcommand{\showXI}[2]{\begin{center}\begin{minipage}{0.45\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+\newcommand{\showBIX}[2]{\begin{center}\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.35\textwidth} #2 \end{minipage}\end{center}}
+
+\newcommand{\showBXI}[2]{\begin{center}\begin{minipage}{0.55\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+\newcommand{\showLIX}[2]{\begin{center}\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.55\textwidth} #2 \end{minipage}\end{center}}
+
+\newcommand{\showLXI}[2]{\begin{center}\begin{minipage}{0.35\textwidth} #1 \end{minipage}\hfill\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+
+
+\newcommand{\showII}[2]{\begin{center}\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.45\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+\newcommand{\showBII}[2]{\begin{center}\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\hfill\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\end{center}}
+
+\newcommand{\showLII}[2]{\begin{center}\begin{minipage}{0.35\textwidth}\includegraphics[width=\textwidth]{#2}\end{minipage}\hfill\begin{minipage}{0.55\textwidth}\includegraphics[width=\textwidth]{#1}\end{minipage}\end{center}}
 
