@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  8 SEP 2026 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  8 SEP 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -98,82 +98,11 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count267
 \calc@Cskip=\skip52
 )
-! You can't use `\spacefactor' in vertical mode.
-\@->\spacefactor 
-                 \@m {}
-l.51 \define{\big}{0.55}
-                        
-? Q
-OK, entering \batchmode...
-! Missing $ inserted.
-<inserted text> 
-                $
-l.51 \define{\big}{0.55}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \define{\big}{0.55}
-                        
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
-! You can't use `\spacefactor' in math mode.
-\@->\spacefactor 
-                 \@m {}
-l.51 \define{\big}{0.55}
-                        
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\@->\spacefactor 
-                 \@m {}
-l.52 \define{\little}{0.35}
-                           
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\@->\spacefactor 
-                 \@m {}
-l.52 \define{\little}{0.35}
-                           
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.53 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Missing character: There is no � in font cmex10!
-Missing character: There is no � in font cmex10!
-Missing character: There is no � in font cmex10!
-Missing character: There is no � in font cmex10!
-) (./main.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count268
+))
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -190,22 +119,20 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count268
+\scratchcounter=\count269
 \scratchdimen=\dimen153
 \scratchbox=\box54
-\nofMPsegments=\count269
-\nofMParguments=\count270
+\nofMPsegments=\count270
+\nofMParguments=\count271
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count271
+\MPscratchCnt=\count272
 \MPscratchDim=\dimen154
-\MPnumerator=\count272
-\makeMPintoPDFobject=\count273
+\MPnumerator=\count273
+\makeMPintoPDFobject=\count274
 \everyMPtoPDFconversion=\toks21
-)
-(/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -216,9 +143,16 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 0.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
@@ -238,9 +172,8 @@ Type  H <return>  for immediate help.
                                                   
 l.40 \image{pingoin.png}
                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+? Q
+OK, entering \batchmode...
 
 LaTeX Warning: File `Pingoing.png' not found on input line 45.
 
@@ -346,39 +279,23 @@ If that doesn't work, type  X <return>  to quit.
 
  [4]
 
-LaTeX Warning: File `Ours.png' not found on input line 117.
+! LaTeX Error: There's no line here to end.
 
-
-! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.117 \showII{Ours.png}{Abeille.jpeg}
-                                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.113     \newline
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-
-LaTeX Warning: File `Abeille.jpeg' not found on input line 117.
-
-
-! Package pdftex.def Error: File `Abeille.jpeg' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 \showII{Ours.png}{Abeille.jpeg}
-                                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
  [5]
 
-LaTeX Warning: File `Ours.png' not found on input line 124.
+LaTeX Warning: File `Ours.png' not found on input line 128.
 
 
 ! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
@@ -387,13 +304,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.124 \showBII{Ours.png}{Abeille.jpeg}
-                                      
+l.128 \showII{Ours.png}{Abeille.jpeg}
+                                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `Abeille.jpeg' not found on input line 124.
+LaTeX Warning: File `Abeille.jpeg' not found on input line 128.
 
 
 ! Package pdftex.def Error: File `Abeille.jpeg' not found: using draft setting.
@@ -403,29 +320,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.124 \showBII{Ours.png}{Abeille.jpeg}
-                                      
+l.128 \showII{Ours.png}{Abeille.jpeg}
+                                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `Abeille.jpeg' not found on input line 127.
-
-
-! Package pdftex.def Error: File `Abeille.jpeg' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127 \showLII{Ours.png}{Abeille.jpeg}
-                                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `Ours.png' not found on input line 127.
+LaTeX Warning: File `Ours.png' not found on input line 135.
 
 
 ! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
@@ -434,14 +335,153 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 \showLII{Ours.png}{Abeille.jpeg}
-                                      
+l.135 ...s.png}<Legende de l'abeille>{Abeille.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Abeille.png' not found on input line 135.
+
+
+! Package pdftex.def Error: File `Abeille.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 ...s.png}<Legende de l'abeille>{Abeille.png}
+                                                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
  [6]
 
-LaTeX Warning: File `Corbeau.png' not found on input line 133.
+LaTeX Warning: File `Ours.png' not found on input line 139.
+
+
+! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 ...s.png}<Legende de l'abeille>{Abeille.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Abeille.png' not found on input line 139.
+
+
+! Package pdftex.def Error: File `Abeille.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 ...s.png}<Legende de l'abeille>{Abeille.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Ours.png' not found on input line 145.
+
+
+! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 ...Legende de l'ours>{Ours.png}{Abeille.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Abeille.png' not found on input line 145.
+
+
+! Package pdftex.def Error: File `Abeille.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 ...Legende de l'ours>{Ours.png}{Abeille.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ [7]
+
+LaTeX Warning: File `Ours.png' not found on input line 153.
+
+
+! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \showBII{Ours.png}{Abeille.jpeg}
+                                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Abeille.jpeg' not found on input line 153.
+
+
+! Package pdftex.def Error: File `Abeille.jpeg' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \showBII{Ours.png}{Abeille.jpeg}
+                                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Abeille.jpeg' not found on input line 156.
+
+
+! Package pdftex.def Error: File `Abeille.jpeg' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \showLII{Ours.png}{Abeille.jpeg}
+                                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Ours.png' not found on input line 156.
+
+
+! Package pdftex.def Error: File `Ours.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \showLII{Ours.png}{Abeille.jpeg}
+                                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ [8]
+
+LaTeX Warning: File `Corbeau.png' not found on input line 162.
 
 
 ! Package pdftex.def Error: File `Corbeau.png' not found: using draft setting.
@@ -450,58 +490,58 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133 ...tat militaire les 17 et 18 juillet 1936.}
+l.162 ...tat militaire les 17 et 18 juillet 1936.}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 133--133
+Underfull \hbox (badness 1184) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 de 1936), couram-ment d^^Sesign^^See
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 133--133
+Underfull \hbox (badness 1968) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 sous le nom de r^^Sevolution es-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 en-globe tous les ^^Sev^^Senements
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 133--133
+Underfull \hbox (badness 1552) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 de type r^^Sevolutionnaire, prin-ci-
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 133--133
+Underfull \hbox (badness 4378) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 pale-ment rat-tach^^Ses au mou-ve-
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 133--133
+Underfull \hbox (badness 2418) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 ment an-ar-chiste et syn-di-cal-iste
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
 \OT1/cmr/m/n/12 r^^Sevolutionnaire d^^Seclench^^Ses en
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 136--136
+Underfull \hbox (badness 1097) in paragraph at lines 165--165
 []\OT1/cmr/m/n/12 Les bases id^^Seologiques de cette
  []
 
 
-Underfull \hbox (badness 2057) in paragraph at lines 136--136
+Underfull \hbox (badness 2057) in paragraph at lines 165--165
 \OT1/cmr/m/n/12 1930, mais aussi au marx-isme
  []
 
 
-LaTeX Warning: File `Renard.jpeg' not found on input line 136.
+LaTeX Warning: File `Renard.jpeg' not found on input line 165.
 
 
 ! Package pdftex.def Error: File `Renard.jpeg' not found: using draft setting.
@@ -510,14 +550,14 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 ... marxisme révolutionnaire.}{Renard.jpeg}
+l.165 ... marxisme révolutionnaire.}{Renard.jpeg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
- [7]
+ [9]
 
-LaTeX Warning: File `Crobeau.png' not found on input line 141.
+LaTeX Warning: File `Crobeau.png' not found on input line 170.
 
 
 ! Package pdftex.def Error: File `Crobeau.png' not found: using draft setting.
@@ -526,28 +566,28 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.141 ...e l'industrie, en Espagne républicaine.}
+l.170 ...e l'industrie, en Espagne républicaine.}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 141--141
+Underfull \hbox (badness 1803) in paragraph at lines 170--170
 []\OT1/cmr/m/n/12 Ce mou-ve-ment a donn^^Se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 \OT1/cmr/m/n/12 paysannes et ou-vri^^Reres,
  []
 
 
-Underfull \hbox (badness 3439) in paragraph at lines 145--145
+Underfull \hbox (badness 3439) in paragraph at lines 174--174
 \OT1/cmr/m/n/12 par les Alg^^Seriens pen-dant plus d'un
  []
 
 
-LaTeX Warning: File `Renard.jpeg' not found on input line 145.
+LaTeX Warning: File `Renard.jpeg' not found on input line 174.
 
 
 ! Package pdftex.def Error: File `Renard.jpeg' not found: using draft setting.
@@ -556,63 +596,63 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 ... un changement significatif}{Renard.jpeg}
+l.174 ... un changement significatif}{Renard.jpeg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
- [8]
-Underfull \hbox (badness 7631) in paragraph at lines 150--150
+ [10]
+Underfull \hbox (badness 7631) in paragraph at lines 179--179
 []\OT1/cmr/m/n/12 Pourtant, bien que la
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 150--150
+Underfull \hbox (badness 4001) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 de divers groupes so-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--150
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 aux|athl^^Retes, ^^Secrivains,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--150
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 po^^Retes, in-tel-lectuels et
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--150
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 qui a main-tenu cette
  []
 
 
-Underfull \hbox (badness 4156) in paragraph at lines 150--150
+Underfull \hbox (badness 4156) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 r^^Sevolution. Cet ef-fort
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 150--150
+Underfull \hbox (badness 1990) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 col-lec-tif fut es-sen-tiel au
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 150--150
+Underfull \hbox (badness 1990) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 prosp^^Serer dans le fu-tur,
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 150--150
+Underfull \hbox (badness 5847) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 leur re-spon-s-abilit^^Se dans
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 150--150
+Underfull \hbox (badness 1436) in paragraph at lines 179--179
 \OT1/cmr/m/n/12 lib-ert^^Se d'expression, qui,
  []
 
 
-LaTeX Warning: File `Renard.jpeg' not found on input line 150.
+LaTeX Warning: File `Renard.jpeg' not found on input line 179.
 
 
 ! Package pdftex.def Error: File `Renard.jpeg' not found: using draft setting.
@@ -621,13 +661,13 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.150 ...ujourd’hui, fait défaut.}{Renard.jpeg}
+l.179 ...ujourd’hui, fait défaut.}{Renard.jpeg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `Corbeau.png' not found on input line 155.
+LaTeX Warning: File `Corbeau.png' not found on input line 184.
 
 
 ! Package pdftex.def Error: File `Corbeau.png' not found: using draft setting.
@@ -636,39 +676,39 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.155 ...tiques et d’opportunités économiques}
+l.184 ...tiques et d’opportunités économiques}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 \OT1/cmr/m/n/12 alg^^Serienne doit ^etre com-prise dans
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 155--155
+Underfull \hbox (badness 5231) in paragraph at lines 184--184
 \OT1/cmr/m/n/12 le con-texte du colo-nial-isme fran^^Xcais.
  []
 
 
-Underfull \hbox (badness 2809) in paragraph at lines 155--155
+Underfull \hbox (badness 2809) in paragraph at lines 184--184
 \OT1/cmr/m/n/12 r^^Segime qui marginal-i-sait et ex-ploitait
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 \OT1/cmr/m/n/12 syst^^Sematiquement la pop-u-la-tion lo-
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 155--155
+Underfull \hbox (badness 2653) in paragraph at lines 184--184
 \OT1/cmr/m/n/12 de droits poli-tiques et d'opportunit^^Ses
  []
 
- [9]
+ [11]
 ! Undefined control sequence.
-l.161 \showTT
+l.190 \showTT
              {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -677,7 +717,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.162 \showBTT
+l.191 \showBTT
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -686,7 +726,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.163 \showLTT
+l.192 \showLTT
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -695,7 +735,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.167 \showIT
+l.196 \showIT
              {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -704,7 +744,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.168 \showTI
+l.197 \showTI
              {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -713,7 +753,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.169 \showBTI
+l.198 \showBTI
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -722,7 +762,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.170 \showBIT
+l.199 \showBIT
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -731,7 +771,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.171 \showLTI
+l.200 \showLTI
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -740,7 +780,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.172 \showLIT
+l.201 \showLIT
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -749,7 +789,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.176 \showTX
+l.205 \showTX
              {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -758,7 +798,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.177 \showXT
+l.206 \showXT
              {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -767,7 +807,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.178 \showBTX
+l.207 \showBTX
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -776,7 +816,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.179 \showBXT
+l.208 \showBXT
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -785,7 +825,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.180 \showLTX
+l.209 \showLTX
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -794,7 +834,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.181 \showLXT
+l.210 \showLXT
               {}{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -802,30 +842,30 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
- [10] (./main.aux)
+ [12] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3267 strings out of 474222
- 58917 string characters out of 5748733
+ 3385 strings out of 474222
+ 61049 string characters out of 5748733
  1931975 words of memory out of 5000000
- 25531 multiletter control sequences out of 15000+600000
- 562747 words of font info for 52 fonts, out of 8000000 for 9000
+ 25644 multiletter control sequences out of 15000+600000
+ 563094 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,10n,82p,733b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,10n,82p,733b,373s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (10 pages, 82737 bytes).
+Output written on main.pdf (12 pages, 84087 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
