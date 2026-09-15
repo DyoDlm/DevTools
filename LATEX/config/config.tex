@@ -9,6 +9,9 @@
 %
 % ==============================================================
 
+% definir la classe du document
+\documentclass[letterpaper,12pt]{article}
+
 % ----------------- Packages requis -----------------
 \usepackage{graphicx}   % \includegraphics (pour \image)
 \usepackage{xparse}     % pour definir des commandes avec arguments
@@ -17,6 +20,21 @@
 \usepackage{caption}    % legendes
 \usepackage{calc}       % arithmetique sur les longueurs (pour \split)
 \usepackage{marginnote} % notes en marge fiables (pour \sidenote)
+
+
+% =======================================================
+%   My personnal shit
+\usepackage{tabularx}
+\usepackage{cite}
+\usepackage[final]{hyperref}
+\usepackage{booktabs}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=blue,
+	filecolor=magenta,
+	urlcolor=blue
+}
 
 
 % ==============================================================

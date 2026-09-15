@@ -3,8 +3,8 @@
 COMPILER="pdflatex"
 SRC_DIR="./srcs"
 LOG_DIR="tex_aux"
-MAIN="main.tex"
-PDF="main.pdf"
+MAIN="catalogue.tex"
+PDF="catalogue.pdf"
 
 info()    { echo -e "\033[36m$1\033[0m"; }
 error()   { echo -e "\033[31m$1\033[0m"; }
@@ -97,7 +97,7 @@ get_state() {
 		MD5="md5"
 	fi
 	SRC_STATE=$(find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;)
-	MAIN_STATE=$(find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;)
+	MAIN_STATE=$(find . -maxdepth 1 -name "$MAIN" -exec $MD5 {} \;)
 	echo "$SRC_STATE $MAIN_STATE"
 }
 
@@ -108,7 +108,7 @@ get_file_hashes() {
 		MD5="md5"
 	fi
 	find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;
-	find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;
+	find . -maxdepth 1 -name "$MAIN" -exec $MD5 {} \;
 }
 
 fetch_modifications() {
