@@ -63,7 +63,7 @@
 
 
 % ==============================================================
-% \image<legende>[taille]{chemin}
+% \image<legende>[taille]{chemin}<label>
 %
 %   <legende> (optionnel, delimite par < >)
 %             texte affiche sous l'image via \caption
@@ -75,17 +75,18 @@
 %       \image<Photo d'un pingouin>[0.6]{pingouin.png}
 %       \image{pingouin.png}                (legende et taille par defaut)
 % ==============================================================
-\NewDocumentCommand{\image}{d<>O{0.4}m}{%
+\NewDocumentCommand{\image}{d<>O{0.4}md<>}{%
     \begin{figure}[H]
         \centering
         \includegraphics[width=#2\linewidth]{#3}%
         \IfNoValueF{#1}{\caption{#1}}%
+        \IfNoValueF{#4}{\label{#4}}%
     \end{figure}%
 }
 
 
 % ==============================================================
-% \tableau<legende>[nb colonnes]{contenu}
+% \tableau<legende>[nb colonnes]{contenu}<label>
 %
 %   <legende>      (optionnel, delimite par < >)
 %                  texte affiche via \caption
@@ -101,7 +102,7 @@
 %           3 & 4 \\
 %       }
 % ==============================================================
-\NewDocumentCommand{\tableau}{d<>O{2}m}{%
+\NewDocumentCommand{\tableau}{d<>O{2}md<>}{%
     \begin{table}[H]
         \centering
         \begin{tabular}{|*{#2}{c|}}
@@ -110,6 +111,7 @@
             \hline
         \end{tabular}%
         \IfNoValueF{#1}{\caption{#1}}%
+        \IfNoValueF{#4}{\label{#4}}%
     \end{table}%
 }
 
