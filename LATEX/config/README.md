@@ -1,15 +1,28 @@
-# Updates
+# Simplex -- Library for lazy people or just begginers
 
-## Cleaner config -- config.tex
+You can handle with simplex the basics of latex for Science reports so you can focus more on what you're writing and less about the syntax.
 
-I have done a good cleanup and structured, corrected, added some functions.
+# What can I handle ? -- images ; tabs ; notes ; minipages
 
-## Gadget update -- dev.sh
+Here I resume textualy what you can and cannot do, but if any doubt, just go check the catalogue.pdf or catalogue.tex where there is many examples for every possible command of the library
 
-You can now see what files you modified. "oh waw" 
+## Images
 
-## Have a good look -- catalog.tex -.pdf
+### \images{image.png}
 
-All the functions written in config.tex are shown with examples in catalog.pdf. You can also check into catalog.tex how they were written.
+### \images[size]{image.png}
 
-# chears
+### \image<_Legende_>[_size_]{image.png}
+
+### \image<_Legende_>[_size_]{image.png}<_label_>
+
+
+## Tabs
+
+## Minipages
+
+## Notes
+
+# Dependencies
+
+# 
