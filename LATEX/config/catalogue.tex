@@ -10,6 +10,7 @@
 \note{$\backslash$image\{foo.png\}}
 \note{$\backslash$image[taille]\{foo.png\}}
 \note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\}}
+\note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\}$\langle$label$\rangle$}
 \vspace{0.5cm}
 \note{$\backslash$tableau[colonnes]\{items\}}
 \note{$\backslash$tableau $\langle$ legende $\rangle$[colonnes]\{items\}}
@@ -46,8 +47,8 @@
 
 \vspace{0.5cm}
 
-\note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\} -- Affiche une image avec legende}
-\image<Photo d'un pingouin>[0.2]{pingoin.png}
+\note{$\backslash$image$\langle$ legende $\rangle$[taille]\{foo.png\}$\langle$label$\rangle$ -- Affiche une image avec legende et même avec un label qu'on peut référencer (check \ref{fig:pingouin})}
+\image<Photo d'un pingouin>[0.2]{pingoin.png}<fig:pingouin>
 
 
 
