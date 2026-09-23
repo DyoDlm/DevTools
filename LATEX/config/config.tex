@@ -275,22 +275,23 @@
 % ==============================================================
 
 % ---- image + texte (0.45 / 0.45) ----
-\NewDocumentCommand{\showIX}{d<>mm}{%
+\NewDocumentCommand{\showIX}{d<>md<>m}{%
     \begin{center}
         \begin{minipage}{0.45\textwidth}
             \centering
             \includegraphics[width=\textwidth]{#2}%
             \IfNoValueF{#1}{\captionof{figure}{#1}}%
+            \IfNoValueF{#3}{\label{#3}}%
         \end{minipage}%
         \hfill
         \begin{minipage}{0.45\textwidth}
-            #3
+            #4
         \end{minipage}%
     \end{center}
 }
 
 % ---- texte + image (0.45 / 0.45) ----
-\NewDocumentCommand{\showXI}{md<>m}{%
+\NewDocumentCommand{\showXI}{md<>md<>}{%
     \begin{center}
         \begin{minipage}{0.45\textwidth}
             #1
@@ -300,27 +301,29 @@
             \centering
             \includegraphics[width=\textwidth]{#3}%
             \IfNoValueF{#2}{\captionof{figure}{#2}}%
+            \IfNoValueF{#4}{\label{#4}}%
         \end{minipage}%
     \end{center}
 }
 
 % ---- image grande (\big) + texte petit (\little) ----
-\NewDocumentCommand{\showBIX}{d<>mm}{%
+\NewDocumentCommand{\showBIX}{d<>md<>m}{%
     \begin{center}
         \begin{minipage}{\big\textwidth}
             \centering
             \includegraphics[width=\textwidth]{#2}%
             \IfNoValueF{#1}{\captionof{figure}{#1}}%
+            \IfNoValueF{#3}{\label{#3}}
         \end{minipage}%
         \hfill
         \begin{minipage}{\little\textwidth}
-            #3
+            #4
         \end{minipage}%
     \end{center}
 }
 
 % ---- texte grand (\big) + image petite (\little) ----
-\NewDocumentCommand{\showBXI}{md<>m}{%
+\NewDocumentCommand{\showBXI}{md<>md<>}{%
     \begin{center}
         \begin{minipage}{\big\textwidth}
             #1
@@ -330,27 +333,29 @@
             \centering
             \includegraphics[width=\textwidth]{#3}%
             \IfNoValueF{#2}{\captionof{figure}{#2}}%
+            \IfNoValueF{#4}{\label{#4}}%
         \end{minipage}%
     \end{center}
 }
 
 % ---- image petite (\little) + texte grand (\big) ----
-\NewDocumentCommand{\showLIX}{d<>mm}{%
+\NewDocumentCommand{\showLIX}{d<>md<>m}{%
     \begin{center}
         \begin{minipage}{\little\textwidth}
             \centering
             \includegraphics[width=\textwidth]{#2}%
             \IfNoValueF{#1}{\captionof{figure}{#1}}%
+            \IfNoValueF{#3}{\label{#3}}%
         \end{minipage}%
         \hfill
         \begin{minipage}{\big\textwidth}
-            #3
+            #4
         \end{minipage}%
     \end{center}
 }
 
 % ---- texte petit (\little) + image grande (\big) ----
-\NewDocumentCommand{\showLXI}{md<>m}{%
+\NewDocumentCommand{\showLXI}{md<>md<>}{%
     \begin{center}
         \begin{minipage}{\little\textwidth}
             #1
@@ -360,40 +365,45 @@
             \centering
             \includegraphics[width=\textwidth]{#3}%
             \IfNoValueF{#2}{\captionof{figure}{#2}}%
+            \IfNoValueF{#4}{\label{#4}}%
         \end{minipage}%
     \end{center}
 }
 
 % ---- deux images (0.45 / 0.45) ----
-\NewDocumentCommand{\showII}{d<>md<>m}{%
+\NewDocumentCommand{\showII}{d<>md<>d<>md<>}{%
     \begin{center}
         \begin{minipage}{0.45\textwidth}
             \centering
             \includegraphics[width=\textwidth]{#2}%
             \IfNoValueF{#1}{\captionof{figure}{#1}}%
+            \IfNoValueF{#3}{\label{#3}}%
         \end{minipage}%
         \hfill
         \begin{minipage}{0.45\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{#4}%
-            \IfNoValueF{#3}{\captionof{figure}{#3}}%
+            \includegraphics[width=\textwidth]{#5}%
+            \IfNoValueF{#4}{\captionof{figure}{#4}}%
+            \IfNoValueF{#6}{\label{#6}}%
         \end{minipage}%
     \end{center}
 }
 
 % ---- deux images, 1ere grande (\big), 2e petite (\little) ----
-\NewDocumentCommand{\showBII}{d<>md<>m}{%
+\NewDocumentCommand{\showBII}{d<>md<>d<>md<>}{%
     \begin{center}
         \begin{minipage}{\big\textwidth}
             \centering
             \includegraphics[width=\textwidth]{#2}%
             \IfNoValueF{#1}{\captionof{figure}{#1}}%
+            \IfNoValue{#3}{\label{#3}}%
         \end{minipage}%
         \hfill
         \begin{minipage}{\little\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{#4}%
-            \IfNoValueF{#3}{\captionof{figure}{#3}}%
+            \includegraphics[width=\textwidth]{#5}%
+            \IfNoValueF{#4}{\captionof{figure}{#4}}%
+            \IfNoValueF{#6}{\label{#6}}%
         \end{minipage}%
     \end{center}
 }
@@ -404,18 +414,20 @@
 %      reste attachee a sa propre image (comme dans le code
 %      d'origine, ou #1 finit dans la moitie \big et #2 dans
 %      la moitie \little) ----
-\NewDocumentCommand{\showLII}{d<>md<>m}{%
+\NewDocumentCommand{\showLII}{d<>md<>d<>md<>}{%
     \begin{center}
         \begin{minipage}{\little\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{#4}%
-            \IfNoValueF{#3}{\captionof{figure}{#3}}%
+            \includegraphics[width=\textwidth]{#5}%
+            \IfNoValueF{#4}{\captionof{figure}{#4}}%
+            \IfNoValueF{#6}{\label{#6}}%
         \end{minipage}%
         \hfill
         \begin{minipage}{\big\textwidth}
             \centering
             \includegraphics[width=\textwidth]{#2}%
             \IfNoValueF{#1}{\captionof{figure}{#1}}%
+            \IfNoValueF{#3}{\label{#3}}%
         \end{minipage}%
     \end{center}
 }
