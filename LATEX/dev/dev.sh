@@ -67,9 +67,27 @@ compile() {
 	show_time "$estimated" &
 	local bar_pid=$!
 
+	# Nom du .aux : pdflatex l'écrit dans le dossier courant,
+	# avec le nom du fichier principal sans chemin ni extension
+	local base
+	base=$(basename "${MAIN%.tex}")
+
+	# On repart d'un journal vide, sinon les anciennes erreurs
+	# s'affichent encore après une compilation réussie
+	: > "$LOG_DIR/dbug"
+
 	info "FIRST COMPILATION"
 	echo Q | $COMPILER "$MAIN" >> "$LOG_DIR/dbug" 2>&1
-	info "SECOND COMPILATION"
+
+	# bibtex seulement si le document contient \bibliography{...}
+	if grep -q '\\bibdata' "$base.aux" 2>/dev/null; then
+		info "BIBLIOGRAPHY"
+		bibtex "$base" >> "$LOG_DIR/dbug" 2>&1
+		info "SECOND COMPILATION"
+		echo Q | $COMPILER "$MAIN" >> "$LOG_DIR/dbug" 2>&1
+	fi
+
+	info "LAST COMPILATION"
 	echo Q | $COMPILER "$MAIN" >> "$LOG_DIR/dbug" 2>&1
 
 	kill "$bar_pid" 2>/dev/null
@@ -82,7 +100,7 @@ compile() {
 	echo "$duration" > "$TIME_FILE"
 
 	for FORMAT in \
-		*.log *.aux *.toc *.out \
+		*.log *.aux *.toc *.out *.bbl *.blg \
 		srcs/*.aux srcs/*.toc srcs/*.out srcs/*.log \
 		srcs/*/*.aux srcs/*/*.toc srcs/*/*.out srcs/*/*.log
 	do
@@ -96,8 +114,8 @@ get_state() {
 	else
 		MD5="md5"
 	fi
-	SRC_STATE=$(find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;)
-	MAIN_STATE=$(find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;)
+	SRC_STATE=$(find -L "$SRC_DIR" -type f \( -name "*.tex" -o -name "*.bib" \) -exec $MD5 {} \;)
+	MAIN_STATE=$(find . -maxdepth 1 \( -name "*.tex" -o -name "*.bib" \) -exec $MD5 {} \;)
 	echo "$SRC_STATE $MAIN_STATE"
 }
 
@@ -107,8 +125,8 @@ get_file_hashes() {
 	else
 		MD5="md5"
 	fi
-	find -L "$SRC_DIR" -type f -name "*.tex" -exec $MD5 {} \;
-	find . -maxdepth 1 -name "main.tex" -exec $MD5 {} \;
+	find -L "$SRC_DIR" -type f \( -name "*.tex" -o -name "*.bib" \) -exec $MD5 {} \;
+	find . -maxdepth 1 \( -name "*.tex" -o -name "*.bib" \) -exec $MD5 {} \;
 }
 
 fetch_modifications() {
@@ -163,13 +181,17 @@ watch() {
 					grep -i "error\|fatal" "$LOG_DIR/dbug" 2>/dev/null | head -20
 				else
 					success "\n\nCOMPILATION\tOK\n\n"
-                    if [[ $BACKUP == "y" ]]; then 
-                        cp $PDF ..
-                    fi
-                    [[ $BACKUP == "y" ]] && cp $PDF .. # wich is prettier ??
+                    [[ $BACKUP == "y" ]] && cp "$PDF" ..
 					info "───────────────────────────────────────────────────\n"
 					#cp "$PDF" $LOG_DIR
                     xdg-open "$PDF" &>/dev/null &
+				fi
+
+				# Clés \cite{...} absentes du .bib (le PDF se crée quand même,
+				# avec des [?] à la place des numéros)
+				if grep -q "didn't find a database entry" "$LOG_DIR/dbug" 2>/dev/null; then
+					warning "\nRÉFÉRENCES MANQUANTES DANS LE .bib :"
+					grep -o "didn't find a database entry for \"[^\"]*\"" "$LOG_DIR/dbug" | sort -u | head -10
 				fi
 			else
 				warning "\nAuto-compilation en pause\n"

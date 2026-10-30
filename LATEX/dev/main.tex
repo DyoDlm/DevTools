@@ -1,12 +1,63 @@
+% ##############################################################
+%
+%   PROJET DE TEST POUR compile.sh
+%
+%   Lancer :   ./compile.sh
+%   Touches :  p = pause / reprise,  c = compiler une fois,  q = quitter
+%
+%   Tests à faire (voir README.txt) :
+%     1. modifier ce fichier            -> recompilation
+%     2. modifier srcs/intro.tex        -> recompilation
+%     3. modifier references.bib        -> recompilation + biblio à jour
+%     4. décommenter la citation \cite{inexistant} dans srcs/intro.tex
+%                                       -> avertissement jaune
+%     5. décommenter \erreurvolontaire ci-dessous -> COMPILATION ERROR
+%
+% ##############################################################
 
-\input{utils/config.tex}
+
+\input{config.tex}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{french.ldf}{\usepackage[french]{babel}}{}
+
+\title{Projet de test}
+\author{Seite \and Boussalia}
+\date{\today}
+
+
 
 \begin{document}
 
-\section{test}
-Hello
-and 
-Bye
+\maketitle
+\tableofcontents
+
+
+
+% ==============================================================
+%   PARTIES (chacune dans srcs/)
+% ==============================================================
+
+\input{srcs/intro}
+\input{srcs/parties/partie1}
+
+
+
+% ==============================================================
+%   TEST D'ERREUR : décommenter la ligne suivante
+% ==============================================================
+
+% \erreurvolontaire
+
+
+
+% ==============================================================
+%   BIBLIOGRAPHIE
+% ==============================================================
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
 
 \end{document}
- 

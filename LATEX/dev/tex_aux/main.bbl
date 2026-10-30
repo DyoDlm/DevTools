@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{article1}
+Jean Dupont and Claire Martin.
+\newblock Un article de test.
+\newblock {\em Revue imaginaire}, 12:1--10, 2024.
+
+\bibitem{livre1}
+Paul Durand.
+\newblock {\em Un livre de test}.
+\newblock Éditions fictives, 2020.
+
+\bibitem{site1}
+{Exemple}.
+\newblock Un site web.
+\newblock \url{https://example.com}.
+\newblock Consulté le 30 octobre 2026.
+
+\end{thebibliography}
