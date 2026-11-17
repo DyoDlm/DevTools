@@ -1,0 +1,29 @@
+% ==============================================================
+%   PARTIE 1  (fichier dans un sous-sous-dossier)
+% ==============================================================
+
+\section{Première partie}
+
+\subsection{Un tableau}
+
+\tableau<Exemple de tableau>[2]{
+    Échantillon & Force (N) \\
+    1           & 2.5       \\
+    2           & 3.1       \\
+}
+
+\subsection{Une note}
+
+\note{Cette partie cite aussi un site web~\cite{site1}.}
+
+Le tableau~\ref{tab:exemple} vérifie que les renvois fonctionnent
+après la dernière compilation.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        A & B \\
+    \end{tabular}
+    \caption{Tableau avec étiquette}
+    \label{tab:exemple}
+\end{table}
